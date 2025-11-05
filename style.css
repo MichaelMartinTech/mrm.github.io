@@ -97,13 +97,12 @@ main {
 	box-shadow: 0 6px 25px var(--shadow);
 	transition: background 0.3s ease, box-shadow 0.3s ease;
 
-	/* padding-top: 0; */
+	padding-top: 2em;
 }
 
 main section:first-of-type {
 	margin-top: 2em;
-	/* margin-top: 0;
-	padding-top: 0;  */
+	padding-top: 2em;
 }
 
 /* ==== Sections ==== */
