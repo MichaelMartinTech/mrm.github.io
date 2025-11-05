@@ -241,35 +241,5 @@
 		});
 	</script>
 
-	<script>
-	(function() {
-	  const user = "csemartin";
-	  const domain = "ucdavis.edu";
-	  const email = user + "@" + domain;
-	
-	  // Select all obfuscated emails
-	  document.querySelectorAll('.js-email').forEach(link => {
-	    // Optional: update text to show real email (comment this out to keep [at]/[dot])
-	    // link.textContent = email;
-	
-	    // Add mailto behavior only when clicked (not statically in HTML)
-	    link.addEventListener('click', () => {
-	      window.location.href = 'mailto:' + email;
-	    }, {passive: true});
-	
-	    // Keyboard support
-	    link.addEventListener('keydown', e => {
-	      if (e.key === 'Enter' || e.key === ' ') {
-	        e.preventDefault();
-	        window.location.href = 'mailto:' + email;
-	      }
-	    });
-	
-	    // Block right-click context menu
-	    link.addEventListener('contextmenu', e => e.preventDefault());
-	  });
-	})();
-	</script>
-
 </body>
 </html>
