@@ -188,94 +188,94 @@ html {
 }
 
 /* default state: hidden sidebar */
-/* ===== Floating Sidebar Navigation ===== */
+/* ===== Floating topbar Navigation (updated from side) ===== */
 
 /* hidden by default */
-#side-nav {
+/* ===== Floating Top Bookmark Bar ===== */
+#top-nav {
 	position: fixed;
-	top: 25%;
-	left: 0.8em;
-	display: none; /* only shown when body.scrolled */
-	flex-direction: column;
-	align-items: flex-start;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none; /* hidden until header scrolls away */
+	justify-content: center;
+	align-items: center;
+	padding: 0.6em 0.5em;
 	background: var(--card-bg);
-	padding: 1.2em 1em;
-	border-radius: 10px;
-	box-shadow: 0 4px 20px var(--shadow);
+	box-shadow: 0 2px 10px var(--shadow);
+	z-index: 999;
 	transition: transform 0.3s ease, opacity 0.3s ease;
-	z-index: 900;
 }
 
-/* links inside sidebar */
-#side-nav a {
-	display: block;
-	margin: 0.4em 0;
+/* show after scrolling past header */
+body.scrolled #top-nav {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* container for nav links */
+.top-nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
+	max-width: 90%;
+}
+
+/* style for links */
+#top-nav a {
 	color: var(--accent);
-	font-weight: 500;
 	text-decoration: none;
+	font-weight: 500;
+	font-size: 0.95em;
 	transition: color 0.2s ease;
 }
 
-#side-nav a:hover {
+#top-nav a:hover {
 	color: var(--accent-dark);
 }
 
-/* show sidebar after header scrolls out of view */
-body.scrolled #side-nav {
-	display: flex;
-	opacity: 1;
-	transform: translateX(0);
-}
-
-/* === collapse button (">") === */
-#side-toggle {
-	position: fixed;
-	top: 30%;
-	left: 0;
-	background: var(--accent);
-	color: #fff;
+/* collapse button */
+#top-toggle {
+	position: absolute;
+	right: 0.8em;
+	top: 0.3em;
+	background: transparent;
 	border: none;
-	border-radius: 0 6px 6px 0;
-	padding: 0.4em 0.6em;
-	font-size: 1em;
+	color: var(--accent);
+	font-size: 1.2em;
 	cursor: pointer;
-	z-index: 950;
-	display: none; /* only visible below header */
-	transition: background 0.3s ease, transform 0.3s ease;
+	padding: 0.3em;
+	border-radius: 6px;
+	transition: transform 0.3s ease, color 0.3s ease;
 }
 
-#side-toggle:hover {
-	background: var(--accent-dark);
+#top-toggle:hover {
+	color: var(--accent-dark);
 }
 
-/* visible once header is gone */
-body.scrolled #side-toggle {
-	display: block;
+/* collapsed state */
+body.top-collapsed #top-nav {
+	height: 2.5em;
+	overflow: hidden;
 }
 
-/* collapsed state (sidebar hidden offscreen) */
-body.side-collapsed #side-nav {
-	transform: translateX(-120%);
-	opacity: 0;
+body.top-collapsed .top-nav-links {
+	display: none;
 }
 
-body.side-collapsed #side-toggle {
-	transform: translateX(0);
+body.top-collapsed #top-toggle {
+	transform: rotate(180deg);
 }
 
-/* main content offset when sidebar visible */
-body.scrolled main {
-	margin-left: 200px;
-	transition: margin-left 0.3s ease;
-}
-
-/* restore on small screens */
-@media (max-width: 900px) {
-	#side-nav,
-	#side-toggle {
-		display: none !important;
+/* small screens adjustments */
+@media (max-width: 600px) {
+	#top-nav {
+		font-size: 0.9em;
+		padding: 0.6em;
 	}
-	body.scrolled main {
-		margin-left: 0;
+	#top-toggle {
+		top: 0.2em;
 	}
 }
