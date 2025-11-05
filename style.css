@@ -267,3 +267,44 @@ body.scrolled.top-collapsed main { padding-top: 0; }
 	body.scrolled #top-nav { padding: 0.6em; }
 	#top-toggle { top: 0.2em; }
 }
+
+/* === Top Contact Links === */
+/* ==== Contact Links ==== */
+.contact-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.5em;
+	margin-top: 1em;
+}
+
+.contact-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	text-decoration: none;
+	color: var(--accent);
+	font-weight: 500;
+	font-size: 0.95em;
+	transition: color 0.2s ease;
+}
+
+.contact-item img {
+	width: 20px;
+	height: 20px;
+	filter: invert(25%) sepia(90%) saturate(200%) hue-rotate(190deg);
+	transition: filter 0.3s ease;
+}
+
+.contact-item:hover {
+	color: var(--accent-dark);
+}
+
+.contact-item:hover img {
+	filter: invert(35%) sepia(80%) saturate(300%) hue-rotate(180deg);
+}
+
+/* On dark mode, make icons lighter automatically */
+[data-theme="dark"] .contact-item img {
+	filter: invert(85%);
+}
