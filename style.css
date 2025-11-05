@@ -192,58 +192,38 @@ html {
 
 /* hidden by default */
 /* ===== Floating Top Bookmark Bar ===== */
-#top-nav {
+body.scrolled #top-nav {
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	width: 100%;
-	display: none; /* hidden until header scrolls away */
-	justify-content: center;
-	align-items: center;
-	padding: 0.6em 0.5em;
 	background: var(--card-bg);
 	box-shadow: 0 2px 10px var(--shadow);
+	padding: 0.6em 0.5em;
 	z-index: 999;
-	transition: transform 0.28s ease, opacity 0.28s ease;
 }
 
-/* show after scrolling past header */
-body.scrolled #top-nav {
-	display: flex;
-}
-
-/* prevent the bar from covering content when visible */
-body.scrolled main {
-	padding-top: 3.4em; /* adjust if you change top bar height */
-	transition: padding-top 0.2s ease;
-}
-
-/* links row */
-.top-nav-links {
+body.scrolled .top-nav-links {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
 	justify-content: center;
 	align-items: center;
 	max-width: 92%;
+	margin: 0 auto;
 }
 
-/* link styles */
-#top-nav a {
-	color: var(--accent);
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 0.95em;
-	transition: color 0.2s ease;
-}
-#top-nav a:hover {
-	color: var(--accent-dark);
+/* prevent the bar from covering content when visible at top */
+body.scrolled main {
+	padding-top: 3.4em; /* adjust if you change bar height */
+	transition: padding-top 0.2s ease;
 }
 
-/* top toggle button (fixed, not inside the bar) */
+/* fixed toggle button that stays even when the bar is collapsed */
 #top-toggle {
 	position: fixed;
-	top: 0.3em;
+	top: 0.35em;
 	right: 0.8em;
 	background: transparent;
 	border: none;
@@ -253,31 +233,25 @@ body.scrolled main {
 	padding: 0.3em 0.4em;
 	border-radius: 6px;
 	z-index: 1000;
-	transition: color 0.2s ease;
-	display: none; /* only show when header scrolled away */
+	display: none; /* show only after header has scrolled away */
 }
-#top-toggle:hover {
-	color: var(--accent-dark);
-}
+#top-toggle:hover { color: var(--accent-dark); }
 
-/* show the toggle only when the header is gone */
-body.scrolled #top-toggle {
-	display: block;
-}
+/* show the toggle only when header is out of view */
+body.scrolled #top-toggle { display: block; }
 
-/* collapsed state: slide the bar up fully offscreen; keep the button visible */
+/* collapsed state: slide the whole nav off-screen so it doesn't block content */
 body.top-collapsed #top-nav {
 	transform: translateY(-110%);
 	opacity: 0;
+	transition: transform 0.28s ease, opacity 0.28s ease;
 }
+
+/* when collapsed, remove the extra top padding */
+body.scrolled.top-collapsed main { padding-top: 0; }
 
 /* small screens */
 @media (max-width: 600px) {
-	#top-nav {
-		font-size: 0.9em;
-		padding: 0.6em;
-	}
-	#top-toggle {
-		top: 0.2em;
-	}
+	body.scrolled #top-nav { padding: 0.6em; }
+	#top-toggle { top: 0.2em; }
 }
