@@ -1,204 +1,200 @@
-/* ==== GLOBAL STYLES ==== */
 :root {
-  --bg: #f6f7fb;
-  --text: #222;
-  --card-bg: #fff;
-  --accent: #0066cc;
-  --accent-dark: #004f99;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --border: #eee;
+	--bg: #f6f7fb;
+	--text: #222;
+	--card-bg: #fff;
+	--accent: #0066cc;
+	--accent-dark: #004f99;
+	--shadow: rgba(0, 0, 0, 0.08);
+	--border: #eee;
 }
 
 [data-theme="dark"] {
-  --bg: #111;
-  --text: #e8e8e8;
-  --card-bg: #181818;
-  --accent: #7cb9ff;
-  --accent-dark: #b3d9ff;
-  --shadow: rgba(0, 0, 0, 0.5);
-  --border: #333;
+	--bg: #111;
+	--text: #e8e8e8;
+	--card-bg: #181818;
+	--accent: #7cb9ff;
+	--accent-dark: #b3d9ff;
+	--shadow: rgba(0, 0, 0, 0.5);
+	--border: #333;
 }
 
-/* Base layout */
+/* ==== Base Layout ==== */
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  transition: background 0.3s ease, color 0.3s ease;
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: var(--bg);
+	color: var(--text);
+	line-height: 1.7;
+	transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Header */
+/* ==== Header ==== */
 header {
-  text-align: center;
-  padding: 3em 1em 2em;
-  background: var(--card-bg);
-  box-shadow: 0 2px 12px var(--shadow);
-  position: relative;
+	text-align: center;
+	padding: 3em 1em 2em;
+	background: var(--card-bg);
+	box-shadow: 0 2px 12px var(--shadow);
+	position: relative;
 }
-
-<button id="theme-toggle">Dark Mode</button>
 
 h1 {
-  font-size: 2.4em;
-  font-weight: 700;
-  margin-bottom: 0.2em;
-  color: var(--text);
+	font-size: 2.4em;
+	font-weight: 700;
+	margin-bottom: 0.2em;
+	color: var(--text);
 }
 
 header p {
-  color: #666;
-  font-size: 1.05em;
-  margin: 0.4em 0 1.2em;
+	color: #666;
+	font-size: 1.05em;
+	margin: 0.4em 0 1.2em;
 }
 
 nav {
-  margin-top: 1.2em;
+	margin-top: 1.2em;
 }
 
 nav a {
-  margin: 0 0.7em;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
-  transition: color 0.2s ease;
+	margin: 0 0.7em;
+	text-decoration: none;
+	color: var(--accent);
+	font-weight: 500;
+	transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: var(--accent-dark);
+	color: var(--accent-dark);
 }
 
-/* Toggle button */
+/* ==== Theme Toggle ==== */
 #theme-toggle {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 0.4em 0.9em;
-  cursor: pointer;
-  font-size: 0.9em;
-  transition: background 0.3s ease;
+	position: absolute;
+	top: 1.5em;
+	right: 1.5em;
+	background: var(--accent);
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 0.4em 0.9em;
+	cursor: pointer;
+	font-size: 0.9em;
+	transition: background 0.3s ease;
 }
 
 #theme-toggle:hover {
-  background: var(--accent-dark);
+	background: var(--accent-dark);
 }
 
-/* Main layout */
+/* ==== Main Layout ==== */
 main {
-  max-width: 900px;
-  background: var(--card-bg);
-  margin: 3em auto;
-  padding: 3em 3em 2em;
-  border-radius: 16px;
-  box-shadow: 0 6px 25px var(--shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+	max-width: 900px;
+	background: var(--card-bg);
+	margin: 3em auto;
+	padding: 3em 3em 2em;
+	border-radius: 16px;
+	box-shadow: 0 6px 25px var(--shadow);
+	transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Section headers */
-section h2 {
-  font-size: 1.4em;
-  border-left: 4px solid var(--accent);
-  padding-left: 0.5em;
-  color: var(--text);
-  margin-bottom: 0.6em;
-}
-
-/* Section cards */
+/* ==== Sections ==== */
 section {
-  background: var(--card-bg);
-  border-radius: 12px;
-  padding: 1.8em 2em;
-  margin: 2em 0;
-  box-shadow: 0 1px 4px var(--shadow);
-  animation: fadeIn 0.4s ease;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+	background: var(--card-bg);
+	border-radius: 12px;
+	padding: 1.8em 2em;
+	margin: 2em 0;
+	box-shadow: 0 1px 4px var(--shadow);
+	animation: fadeIn 0.4s ease;
+	transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Lists */
+section h2 {
+	font-size: 1.4em;
+	border-left: 4px solid var(--accent);
+	padding-left: 0.5em;
+	color: var(--text);
+	margin-bottom: 0.6em;
+}
+
+/* ==== Lists ==== */
 ul {
-  list-style: none;
-  padding-left: 1em;
+	list-style: none;
+	padding-left: 1em;
 }
 
 ul li::before {
-  content: "• ";
-  color: var(--accent);
-  font-weight: bold;
+	content: "• ";
+	color: var(--accent);
+	font-weight: bold;
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
+	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent-dark);
-  text-decoration: underline;
+	color: var(--accent-dark);
+	text-decoration: underline;
 }
 
-/* Headshot image */
+/* ==== Headshot ==== */
 .headshot {
-  width: 180px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1.5em;
+	width: 180px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 1.5em;
 }
 
-/* Footer */
+/* ==== Footer ==== */
 footer {
-  text-align: center;
-  padding: 1.2em;
-  font-size: 0.9em;
-  color: #666;
-  background-color: var(--card-bg);
-  border-top: 1px solid var(--border);
+	text-align: center;
+	padding: 1.2em;
+	font-size: 0.9em;
+	color: #666;
+	background-color: var(--card-bg);
+	border-top: 1px solid var(--border);
 }
 
-/* Animation */
+/* ==== Animation ==== */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive design */
+/* ==== Responsive ==== */
 @media (max-width: 600px) {
-  main {
-    padding: 2em 1.5em;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav a {
-    margin: 0.4em;
-  }
-  #theme-toggle {
-    top: 1em;
-    right: 1em;
-  }
+	main {
+		padding: 2em 1.5em;
+	}
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	nav a {
+		margin: 0.4em;
+	}
+	#theme-toggle {
+		top: 1em;
+		right: 1em;
+	}
 }
 
-/* ==== DARK MODE AUTO (system preference) ==== */
+/* ==== Auto Dark Mode (system preference) ==== */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111;
-    --text: #e8e8e8;
-    --card-bg: #181818;
-    --accent: #7cb9ff;
-    --accent-dark: #b3d9ff;
-    --shadow: rgba(0, 0, 0, 0.5);
-    --border: #333;
-  }
+	:root {
+		--bg: #111;
+		--text: #e8e8e8;
+		--card-bg: #181818;
+		--accent: #7cb9ff;
+		--accent-dark: #b3d9ff;
+		--shadow: rgba(0, 0, 0, 0.5);
+		--border: #333;
+	}
 }
