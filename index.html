@@ -53,10 +53,26 @@
 				<img src="assets/icons/linkedin.svg" alt="LinkedIn icon"> LinkedIn
 			</a>
 
-			<a class="contact-item" role="link" aria-label="Email address">
+			<a class="contact-item" id="email-link" aria-label="Email address">
 			  <img src="assets/icons/email.svg" alt="Email icon">
-			  csemartin[at]ucdavis[dot]edu
+			  <span id="email-text">csemartin[at]ucdavis[dot]edu</span>
 			</a>
+			
+			<script>
+			  (function() {
+			    // Email broken into pieces so bots can't see as a full string
+			    const user = "csemartin";
+			    const domain = "ucdavis.edu";
+			    const email = user + "@" + domain;
+			
+			    const link = document.getElementById("email-link");
+			    const text = document.getElementById("email-text");
+			
+			    // Set the mailto link
+			    link.href = "mailto:" + email;
+			  })();
+			</script>
+
 		</div>
 
 		<!-- Bookmarks live under the name while at top -->
