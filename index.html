@@ -59,18 +59,23 @@
 			</a>
 			
 			<script>
-			  (function() {
-			    // Email broken into pieces so bots can't see as a full string
-			    const user = "csemartin";
-			    const domain = "ucdavis.edu";
-			    const email = user + "@" + domain;
-			
-			    const link = document.getElementById("email-link");
-			    const text = document.getElementById("email-text");
-			
-			    // Set the mailto link
-			    link.href = "mailto:" + email;
-			  })();
+				(function() {
+				  const user = "csemartin";
+				  const domain = "ucdavis.edu";
+				  const link = document.getElementById("email-link");
+				  const text = document.getElementById("email-text");
+				
+				  // Show real email in UI if you want
+				  text.textContent = user + "@" + domain; // optional
+				
+				  // Create the mailto only on click (prevents right-click copy until user interacts)
+				  link.addEventListener('click', function (e) {
+				    window.location.href = 'mailto:' + user + '@' + domain;
+				  });
+				
+				  // prevent context menu from exposing default actions
+				  link.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+				})();
 			</script>
 
 		</div>
