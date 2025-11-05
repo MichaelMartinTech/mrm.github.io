@@ -53,31 +53,11 @@
 				<img src="assets/icons/linkedin.svg" alt="LinkedIn icon"> LinkedIn
 			</a>
 
-			<a class="contact-item" id="email-link" aria-label="Email address">
+			<a class="contact-item js-email" aria-label="Email address">
 			  <img src="assets/icons/email.svg" alt="Email icon">
-			  <span id="email-text">csemartin[at]ucdavis[dot]edu</span>
+			  <span>csemartin[at]ucdavis[dot]edu</span>
 			</a>
-			
-			<script>
-				(function() {
-				  const user = "csemartin";
-				  const domain = "ucdavis.edu";
-				  const link = document.getElementById("email-link");
-				  const text = document.getElementById("email-text");
-				
-				  // Show real email in UI if you want
-				  text.textContent = user + "@" + domain; // optional
-				
-				  // Create the mailto only on click (prevents right-click copy until user interacts)
-				  link.addEventListener('click', function (e) {
-				    window.location.href = 'mailto:' + user + '@' + domain;
-				  });
-				
-				  // prevent context menu from exposing default actions
-				  link.addEventListener('contextmenu', function(e){ e.preventDefault(); });
-				})();
-			</script>
-
+	
 		</div>
 
 		<!-- Bookmarks live under the name while at top -->
@@ -207,7 +187,9 @@
 			<p>ResearchGate: <a href="https://www.researchgate.net/profile/M-Martin-10" target="_blank">M-Martin-10</a></p>
 			<p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=d2N1H0QAAAAJ&view_op=list_works&authuser=2&gmla=AGd7smG_vssD5Pq0snPrT2XIoVueqAfh_Ts_vlHZI_9Kr6xDjPOdfDqAjKJKxbZPe0iGzePIzL5fOa_lMSfAm_3n" target="_blank">View Profile</a></p>
 			<p>LinkedIn: <a href="https://www.linkedin.com/in/martin-portfolio" target="_blank">martin-portfolio</a></p>
-			<p>Email: csemartin[at]ucdavis[dot]edu</p>
+			<p>
+			  Email: <a class="js-email">csemartin[at]ucdavis[dot]edu</a>
+			</p>
 
 		</section>
 	</main>
@@ -257,6 +239,36 @@
 			const collapsed = document.body.classList.toggle('top-collapsed');
 			topToggle.textContent = collapsed ? '˅' : '˄';
 		});
+	</script>
+
+	<script>
+	(function() {
+	  const user = "csemartin";
+	  const domain = "ucdavis.edu";
+	  const email = user + "@" + domain;
+	
+	  // Select all obfuscated emails
+	  document.querySelectorAll('.js-email').forEach(link => {
+	    // Optional: update text to show real email (comment this out to keep [at]/[dot])
+	    // link.textContent = email;
+	
+	    // Add mailto behavior only when clicked (not statically in HTML)
+	    link.addEventListener('click', () => {
+	      window.location.href = 'mailto:' + email;
+	    }, {passive: true});
+	
+	    // Keyboard support
+	    link.addEventListener('keydown', e => {
+	      if (e.key === 'Enter' || e.key === ' ') {
+	        e.preventDefault();
+	        window.location.href = 'mailto:' + email;
+	      }
+	    });
+	
+	    // Block right-click context menu
+	    link.addEventListener('contextmenu', e => e.preventDefault());
+	  });
+	})();
 	</script>
 
 </body>
