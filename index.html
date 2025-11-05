@@ -147,5 +147,27 @@
 	<footer>
 		<p>All Rights Reserved © Michael R. Martin</p>
 	</footer>
+
+	<script>
+	const toggle = document.getElementById('theme-toggle');
+	const root = document.documentElement;
+	
+	function setTheme(theme) {
+	  root.setAttribute('data-theme', theme);
+	  localStorage.setItem('theme', theme);
+	  toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+	}
+	
+	// Initialize theme
+	const savedTheme = localStorage.getItem('theme');
+	if (savedTheme) setTheme(savedTheme);
+	else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+	
+	// Toggle on click
+	toggle.addEventListener('click', () => {
+	  const current = root.getAttribute('data-theme');
+	  setTheme(current === 'dark' ? 'light' : 'dark');
+	});
+	</script>
 </body>
 </html>
