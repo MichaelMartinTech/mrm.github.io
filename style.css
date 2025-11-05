@@ -91,11 +91,18 @@ nav a:hover {
 main {
 	max-width: 900px;
 	background: var(--card-bg);
-	margin: 3em auto;
+	margin: 3em auto 0 auto; /* sets top margin to 3em normally */
 	padding: 3em 3em 2em;
 	border-radius: 16px;
 	box-shadow: 0 6px 25px var(--shadow);
 	transition: background 0.3s ease, box-shadow 0.3s ease;
+
+	padding-top: 0;
+}
+
+main section:first-of-type {
+	margin-top: 0;
+	padding-top: 0;
 }
 
 /* ==== Sections ==== */
