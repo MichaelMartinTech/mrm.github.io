@@ -188,21 +188,25 @@ html {
 }
 
 /* default state: hidden sidebar */
+/* ===== Floating Sidebar Navigation ===== */
+
+/* hidden by default */
 #side-nav {
 	position: fixed;
 	top: 25%;
-	left: 1.5em;
-	display: none; /* hidden by default */
+	left: 0.8em;
+	display: none; /* only shown when body.scrolled */
 	flex-direction: column;
 	align-items: flex-start;
 	background: var(--card-bg);
-	padding: 1.2em;
-	border-radius: 12px;
+	padding: 1.2em 1em;
+	border-radius: 10px;
 	box-shadow: 0 4px 20px var(--shadow);
-	transition: opacity 0.3s ease, transform 0.3s ease;
+	transition: transform 0.3s ease, opacity 0.3s ease;
 	z-index: 900;
 }
 
+/* links inside sidebar */
 #side-nav a {
 	display: block;
 	margin: 0.4em 0;
@@ -216,22 +220,59 @@ html {
 	color: var(--accent-dark);
 }
 
-/* show sidebar only when body.scrolled class is active */
+/* show sidebar after header scrolls out of view */
 body.scrolled #side-nav {
 	display: flex;
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateX(0);
 }
 
-/* push main content slightly when sidebar visible */
+/* === collapse button (">") === */
+#side-toggle {
+	position: fixed;
+	top: 30%;
+	left: 0;
+	background: var(--accent);
+	color: #fff;
+	border: none;
+	border-radius: 0 6px 6px 0;
+	padding: 0.4em 0.6em;
+	font-size: 1em;
+	cursor: pointer;
+	z-index: 950;
+	display: none; /* only visible below header */
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#side-toggle:hover {
+	background: var(--accent-dark);
+}
+
+/* visible once header is gone */
+body.scrolled #side-toggle {
+	display: block;
+}
+
+/* collapsed state (sidebar hidden offscreen) */
+body.side-collapsed #side-nav {
+	transform: translateX(-120%);
+	opacity: 0;
+}
+
+body.side-collapsed #side-toggle {
+	transform: translateX(0);
+}
+
+/* main content offset when sidebar visible */
 body.scrolled main {
-	margin-left: 220px;
+	margin-left: 200px;
 	transition: margin-left 0.3s ease;
 }
 
-/* smaller screens: revert to default inline nav, hide sidebar */
+/* restore on small screens */
 @media (max-width: 900px) {
-	#side-nav {
+	#side-nav,
+	#side-toggle {
 		display: none !important;
 	}
 	body.scrolled main {
