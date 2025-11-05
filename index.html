@@ -16,16 +16,20 @@
 		<p>Ph.D. Student in Computer Science<br>
 			 <a href="https://www.ucdavis.edu/">University of California, Davis</a></p>
 		<!-- == Update: Navigation ID added == -->
-		<nav id="main-nav">
-			<a href="#home">Home</a>
-			<a href="#news">News</a>
-			<a href="#publications">Publications</a>
-			<a href="#experience">Experience</a>
-			<a href="#teaching">Teaching</a>
-			<a href="#service">Service</a>
-			<a href="#awards">Awards</a>
-			<a href="#contact">Contact</a>
+		<nav id="top-nav">
+			<div class="top-nav-links">
+				<a href="#home">Home</a>
+				<a href="#news">News</a>
+				<a href="#publications">Publications</a>
+				<a href="#experience">Experience</a>
+				<a href="#teaching">Teaching</a>
+				<a href="#service">Service</a>
+				<a href="#awards">Awards</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<button id="top-toggle">˅</button>
 		</nav>
+
 	</header>
 
 	<nav id="side-nav">
@@ -186,8 +190,10 @@
 
 	<script>
 		const header = document.querySelector('header');
-		const sideNav = document.getElementById('side-nav');
+		const topNav = document.getElementById('top-nav');
+		const topToggle = document.getElementById('top-toggle');
 	
+		// Show/hide the top nav after scrolling past header
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > header.offsetHeight) {
 				document.body.classList.add('scrolled');
@@ -195,7 +201,15 @@
 				document.body.classList.remove('scrolled');
 			}
 		});
+	
+		// Collapse / expand top nav
+		topToggle.addEventListener('click', () => {
+			document.body.classList.toggle('top-collapsed');
+			// Flip arrow symbol
+			topToggle.textContent = document.body.classList.contains('top-collapsed') ? '˄' : '˅';
+		});
 	</script>
+
 
 	<script>
 		const sideToggle = document.getElementById('side-toggle');
