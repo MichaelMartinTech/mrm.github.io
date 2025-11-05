@@ -38,6 +38,9 @@
 		<a href="#awards">Awards</a>
 		<a href="#contact">Contact</a>
 	</nav>
+	
+	<button id="side-toggle">›</button>
+
 
 
 	<main>
@@ -193,6 +196,21 @@
 			}
 		});
 	</script>
+
+	<script>
+		const sideToggle = document.getElementById('side-toggle');
+	
+		sideToggle.addEventListener('click', () => {
+			document.body.classList.toggle('side-collapsed');
+			// flip the icon direction
+			if (document.body.classList.contains('side-collapsed')) {
+				sideToggle.textContent = '›';
+			} else {
+				sideToggle.textContent = '‹';
+			}
+		});
+	</script>
+
 
 </body>
 </html>
