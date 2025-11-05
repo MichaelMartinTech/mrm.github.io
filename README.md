@@ -1,3 +1,1 @@
-theme: jekyll-theme-minimal
-title: Homepage
-description: This is a placeholder page.
+
