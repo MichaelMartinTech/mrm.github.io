@@ -177,28 +177,29 @@
 
 	<script>
 		const header = document.querySelector('header');
-		const topNav = document.getElementById('top-nav');
 		const topToggle = document.getElementById('top-toggle');
 	
-		/* show/hide the top bookmark bar after passing the header */
+		/* add/remove .scrolled when passing the header */
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > header.offsetHeight) {
 				document.body.classList.add('scrolled');
 			} else {
 				document.body.classList.remove('scrolled');
-				/* ensure expanded when returning to top */
+				/* when back at the very top, restore expanded state and reset arrow */
 				document.body.classList.remove('top-collapsed');
 				topToggle.textContent = '˅';
 			}
 		});
 	
-		/* collapse / expand */
+		/* collapse/expand: collapsed shows ˄ (tap to expand), expanded shows ˅ (tap to collapse) */
 		topToggle.addEventListener('click', () => {
 			const collapsed = document.body.classList.toggle('top-collapsed');
-			topToggle.textContent = collapsed ? '˅' : '˄';
+			topToggle.textContent = collapsed ? '˄' : '˅';
 		});
 	</script>
 
+
+	
 
 
 </body>
