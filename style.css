@@ -1,98 +1,204 @@
-/* Basic layout */
-body {
-	font-family: 'Inter', sans-serif;
-	/* font-family: 'Helvetica Neue', Arial, sans-serif; */
-	margin: 0;
-	padding: 0;
-	color: #222;
-	background-color: #fdfdfd;
-	line-height: 1.6;
+/* ==== GLOBAL STYLES ==== */
+:root {
+  --bg: #f6f7fb;
+  --text: #222;
+  --card-bg: #fff;
+  --accent: #0066cc;
+  --accent-dark: #004f99;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --border: #eee;
 }
 
-header {
-	text-align: center;
-	padding: 2em 1em 1em;
-	background: #ffffff;
+[data-theme="dark"] {
+  --bg: #111;
+  --text: #e8e8e8;
+  --card-bg: #181818;
+  --accent: #7cb9ff;
+  --accent-dark: #b3d9ff;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --border: #333;
 }
+
+/* Base layout */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3em 1em 2em;
+  background: var(--card-bg);
+  box-shadow: 0 2px 12px var(--shadow);
+  position: relative;
+}
+
+<button id="theme-toggle">Dark Mode</button>
 
 h1 {
-	font-size: 2em;
-	margin-bottom: 0.2em;
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  color: var(--text);
 }
 
 header p {
-	color: #555;
-	font-size: 1.05em;
+  color: #666;
+  font-size: 1.05em;
+  margin: 0.4em 0 1.2em;
 }
 
 nav {
-	margin-top: 1em;
+  margin-top: 1.2em;
 }
 
 nav a {
-	margin: 0 0.6em;
-	text-decoration: none;
-	color: #0055aa;
-	font-weight: 500;
+  margin: 0 0.7em;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-	text-decoration: underline;
+  color: var(--accent-dark);
 }
 
-/* Sections */
-section {
-	max-width: 850px;
-	margin: 2em auto;
-	padding: 0 1em;
+/* Toggle button */
+#theme-toggle {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4em 0.9em;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
 }
 
+#theme-toggle:hover {
+  background: var(--accent-dark);
+}
+
+/* Main layout */
+main {
+  max-width: 900px;
+  background: var(--card-bg);
+  margin: 3em auto;
+  padding: 3em 3em 2em;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section headers */
 section h2 {
-	border-bottom: 2px solid #ddd;
-	padding-bottom: 0.3em;
-	color: #333;
+  font-size: 1.4em;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5em;
+  color: var(--text);
+  margin-bottom: 0.6em;
 }
 
+/* Section cards */
+section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.8em 2em;
+  margin: 2em 0;
+  box-shadow: 0 1px 4px var(--shadow);
+  animation: fadeIn 0.4s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lists */
 ul {
-	list-style-type: square;
-	padding-left: 1.2em;
+  list-style: none;
+  padding-left: 1em;
+}
+
+ul li::before {
+  content: "• ";
+  color: var(--accent);
+  font-weight: bold;
 }
 
 a {
-	color: #0055aa;
-	text-decoration: none;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-	text-decoration: underline;
+  color: var(--accent-dark);
+  text-decoration: underline;
 }
 
 /* Headshot image */
 .headshot {
-	width: 180px;
-	border-radius: 50%;
-	display: block;
-	margin: 0 auto 1.5em;
+  width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5em;
 }
 
 /* Footer */
 footer {
-	text-align: center;
-	padding: 1em;
-	font-size: 0.9em;
+  text-align: center;
+  padding: 1.2em;
+  font-size: 0.9em;
   color: #666;
-	background-color: #fafafa;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border);
+}
+
+/* Animation */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+  main {
+    padding: 2em 1.5em;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 0.4em;
+  }
+  #theme-toggle {
+    top: 1em;
+    right: 1em;
+  }
+}
 
-	nav a {
-		margin: 0.4em;
-	}
+/* ==== DARK MODE AUTO (system preference) ==== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --text: #e8e8e8;
+    --card-bg: #181818;
+    --accent: #7cb9ff;
+    --accent-dark: #b3d9ff;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --border: #333;
+  }
 }
