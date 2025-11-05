@@ -204,26 +204,31 @@ html {
 	background: var(--card-bg);
 	box-shadow: 0 2px 10px var(--shadow);
 	z-index: 999;
-	transition: transform 0.3s ease, opacity 0.3s ease;
+	transition: transform 0.28s ease, opacity 0.28s ease;
 }
 
 /* show after scrolling past header */
 body.scrolled #top-nav {
 	display: flex;
-	flex-wrap: wrap;
 }
 
-/* container for nav links */
+/* prevent the bar from covering content when visible */
+body.scrolled main {
+	padding-top: 3.4em; /* adjust if you change top bar height */
+	transition: padding-top 0.2s ease;
+}
+
+/* links row */
 .top-nav-links {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
 	justify-content: center;
 	align-items: center;
-	max-width: 90%;
+	max-width: 92%;
 }
 
-/* style for links */
+/* link styles */
 #top-nav a {
 	color: var(--accent);
 	text-decoration: none;
@@ -231,45 +236,42 @@ body.scrolled #top-nav {
 	font-size: 0.95em;
 	transition: color 0.2s ease;
 }
-
 #top-nav a:hover {
 	color: var(--accent-dark);
 }
 
-/* collapse button */
+/* top toggle button (fixed, not inside the bar) */
 #top-toggle {
-	position: absolute;
-	right: 0.8em;
+	position: fixed;
 	top: 0.3em;
+	right: 0.8em;
 	background: transparent;
 	border: none;
 	color: var(--accent);
 	font-size: 1.2em;
 	cursor: pointer;
-	padding: 0.3em;
+	padding: 0.3em 0.4em;
 	border-radius: 6px;
-	transition: transform 0.3s ease, color 0.3s ease;
+	z-index: 1000;
+	transition: color 0.2s ease;
+	display: none; /* only show when header scrolled away */
 }
-
 #top-toggle:hover {
 	color: var(--accent-dark);
 }
 
-/* collapsed state */
+/* show the toggle only when the header is gone */
+body.scrolled #top-toggle {
+	display: block;
+}
+
+/* collapsed state: slide the bar up fully offscreen; keep the button visible */
 body.top-collapsed #top-nav {
-	height: 2.5em;
-	overflow: hidden;
+	transform: translateY(-110%);
+	opacity: 0;
 }
 
-body.top-collapsed .top-nav-links {
-	display: none;
-}
-
-body.top-collapsed #top-toggle {
-	transform: rotate(180deg);
-}
-
-/* small screens adjustments */
+/* small screens */
 @media (max-width: 600px) {
 	#top-nav {
 		font-size: 0.9em;
