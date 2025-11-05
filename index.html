@@ -27,8 +27,9 @@
 				<a href="#awards">Awards</a>
 				<a href="#contact">Contact</a>
 			</div>
-			<button id="top-toggle">˅</button>
 		</nav>
+
+		<button id="top-toggle">˅</button>
 
 	</header>
 
@@ -193,37 +194,25 @@
 		const topNav = document.getElementById('top-nav');
 		const topToggle = document.getElementById('top-toggle');
 	
-		// Show/hide the top nav after scrolling past header
+		/* show/hide the top bookmark bar after passing the header */
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > header.offsetHeight) {
 				document.body.classList.add('scrolled');
 			} else {
 				document.body.classList.remove('scrolled');
+				/* ensure expanded when returning to top */
+				document.body.classList.remove('top-collapsed');
+				topToggle.textContent = '˅';
 			}
 		});
 	
-		// Collapse / expand top nav
+		/* collapse / expand */
 		topToggle.addEventListener('click', () => {
-			document.body.classList.toggle('top-collapsed');
-			// Flip arrow symbol
-			topToggle.textContent = document.body.classList.contains('top-collapsed') ? '˄' : '˅';
+			const collapsed = document.body.classList.toggle('top-collapsed');
+			topToggle.textContent = collapsed ? '˄' : '˅';
 		});
 	</script>
 
-
-	<script>
-		const sideToggle = document.getElementById('side-toggle');
-	
-		sideToggle.addEventListener('click', () => {
-			document.body.classList.toggle('side-collapsed');
-			// flip the icon direction
-			if (document.body.classList.contains('side-collapsed')) {
-				sideToggle.textContent = '›';
-			} else {
-				sideToggle.textContent = '‹';
-			}
-		});
-	</script>
 
 
 </body>
