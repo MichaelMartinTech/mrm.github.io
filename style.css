@@ -8,6 +8,16 @@
 	--border: #eee;
 }
 
+[data-theme="dark"] {
+	--bg: #111;
+	--text: #e8e8e8;
+	--card-bg: #181818;
+	--accent: #7cb9ff;
+	--accent-dark: #b3d9ff;
+	--shadow: rgba(0, 0, 0, 0.5);
+	--border: #333;
+}
+
 /* ==== Base Layout ==== */
 body {
 	font-family: 'Inter', sans-serif;
