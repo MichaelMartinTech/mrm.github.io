@@ -11,7 +11,6 @@
 
 <body>
 	<header>
-		<button id="theme-toggle">Dark Mode</button>
 		<h1>Michael R. Martin</h1>
 		<p>Ph.D. Student in Computer Science<br>
 			 <a href="https://www.ucdavis.edu/">University of California, Davis</a></p>
@@ -30,7 +29,6 @@
 	<main>
 		<!-- ===== HOME SECTION ===== -->
 		<section id="home">
-			<!-- Add your headshot here -->
 			<!-- Example: <img src="assets/headshot.jpg" alt="Michael R. Martin portrait" class="headshot"> -->
 			<p>
 				I am a Ph.D. student in the <a href="https://vidi.cs.ucdavis.edu/">Visualization & Interface Design Innovation (VIDi) Lab</a> 
@@ -148,25 +146,5 @@
 	<footer>
 		<p>All Rights Reserved © Michael R. Martin</p>
 	</footer>
-
-	<script>
-	const toggle = document.getElementById('theme-toggle');
-	const root = document.documentElement;
-	
-	function setTheme(theme) {
-		root.setAttribute('data-theme', theme);
-		localStorage.setItem('theme', theme);
-		toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
-	}
-	
-	const savedTheme = localStorage.getItem('theme');
-	if (savedTheme) setTheme(savedTheme);
-	else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
-	
-	toggle.addEventListener('click', () => {
-		const current = root.getAttribute('data-theme');
-		setTheme(current === 'dark' ? 'light' : 'dark');
-	});
-	</script>
 </body>
 </html>
