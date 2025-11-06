@@ -494,21 +494,21 @@
 	      // ensure it's collapsed by default when entering floating mode
 	      if (!document.body.dataset.enteredFloating) {
 	        document.body.classList.add('top-collapsed');
-	        topToggle.textContent = '˄';
+	        topToggle.textContent = '˅';
 	        document.body.dataset.enteredFloating = 'true';
 	      }
 	    } else {
 	      // reset when back at top
 	      document.body.classList.remove('scrolled');
 	      document.body.classList.remove('top-collapsed');
-	      topToggle.textContent = '˅';
+	      topToggle.textContent = '˄';
 	      delete document.body.dataset.enteredFloating;
 	    }
 	  });
 	
 	  // start visible at top (expanded)
 	  document.body.classList.remove('top-collapsed');
-	  topToggle.textContent = '˅';
+	  topToggle.textContent = '˄';
 	</script>
 
 	<script>
