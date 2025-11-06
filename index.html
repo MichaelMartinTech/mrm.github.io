@@ -478,34 +478,38 @@
 	  const header = document.querySelector('header');
 	  const topToggle = document.getElementById('top-toggle');
 	
-	  // collapse / expand manually with button
+	  // manual toggle
 	  topToggle.addEventListener('click', () => {
 	    const isCollapsed = document.body.classList.toggle('top-collapsed');
 	    topToggle.textContent = isCollapsed ? '˄' : '˅';
 	  });
 	
-	  // detect scroll to toggle .scrolled
+	  // scroll logic
 	  window.addEventListener('scroll', () => {
 	    const pastHeader = window.scrollY > header.offsetHeight;
 	
 	    if (pastHeader) {
+	      // show floating mode
 	      document.body.classList.add('scrolled');
-	      // auto-hide when going below header
-	      document.body.classList.add('top-collapsed');
-	      topToggle.textContent = '˄';
+	      // ensure it's collapsed by default when entering floating mode
+	      if (!document.body.dataset.enteredFloating) {
+	        document.body.classList.add('top-collapsed');
+	        topToggle.textContent = '˄';
+	        document.body.dataset.enteredFloating = 'true';
+	      }
 	    } else {
+	      // reset when back at top
 	      document.body.classList.remove('scrolled');
-	      // restore user’s chosen state when back at top
-	      topToggle.textContent = document.body.classList.contains('top-collapsed') ? '˄' : '˅';
+	      document.body.classList.remove('top-collapsed');
+	      topToggle.textContent = '˅';
+	      delete document.body.dataset.enteredFloating;
 	    }
 	  });
 	
-	  // start collapsed and not scrolled
-	  document.body.classList.add('top-collapsed');
-	  document.body.classList.remove('scrolled');
-	  topToggle.textContent = '˄';
+	  // start visible at top (expanded)
+	  document.body.classList.remove('top-collapsed');
+	  topToggle.textContent = '˅';
 	</script>
-
 
 	<script>
 		// Smooth scroll to top when clicking "Home"
