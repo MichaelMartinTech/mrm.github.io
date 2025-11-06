@@ -495,10 +495,10 @@
 			const collapsed = document.body.classList.toggle('top-collapsed');
 			topToggle.textContent = collapsed ? '˅' : '˄';
 		});
+		
+		document.body.classList.add('top-collapsed');
+		topToggle.textContent = '˅';
 	</script>
-
-	document.body.classList.add('top-collapsed');
-	topToggle.textContent = '˅';
 
 	<script>
 		// Smooth scroll to top when clicking "Home"
