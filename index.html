@@ -317,5 +317,16 @@
 		});
 	</script>
 
+	<script>
+		// Smooth scroll to top when clicking "Home"
+		document.querySelector('a[href="#home"]').addEventListener('click', (event) => {
+			event.preventDefault(); // stop default jump behavior
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	</script>
+
 </body>
 </html>
