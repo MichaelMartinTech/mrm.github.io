@@ -87,6 +87,27 @@ nav a:hover {
 	background: var(--accent-dark);
 }
 
+/* ==== CV Button ==== */
+.cv-button {
+	position: absolute;
+	top: 1.5em;
+	right: 6.5em; /* moves it left of the theme toggle */
+	background: var(--accent);
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 0.4em 0.9em;
+	cursor: pointer;
+	font-size: 0.9em;
+	text-decoration: none;
+	transition: background 0.3s ease;
+	z-index: 1000;
+}
+
+.cv-button:hover {
+	background: var(--accent-dark);
+}
+
 /* ==== Main Layout ==== */
 main {
 	max-width: 900px;
