@@ -101,6 +101,15 @@ nav a:hover {
 	background: var(--accent-dark);
 }
 
+/* Override only the CV button */
+.cv-button {
+	background: #888;
+	color: #fff;
+}
+.cv-button:hover {
+	background: #666;
+}
+
 /* ==== Main Layout ==== */
 main {
 	max-width: 900px;
