@@ -168,6 +168,17 @@ a:hover {
 	text-decoration: underline;
 }
 
+strong,
+b {
+	font-weight: 700;
+	color: var(--text);
+}
+
+ul li strong {
+	font-weight: 700;
+}
+
+
 /* ==== Headshot ==== */
 .headshot {
 	width: 180px;
@@ -365,7 +376,8 @@ header .contact-item:hover img {
 /* === Current Research layout === */
 .research-item {
 	display: grid;
-	grid-template-columns: 140px 1fr; /* SMALL left column */
+	grid-template-columns: 140px 1fr;
+	/* SMALL left column */
 	gap: 20px;
 	align-items: start;
 	margin-bottom: 24px;
@@ -373,7 +385,8 @@ header .contact-item:hover img {
 
 .research-image img {
 	width: 100%;
-	max-width: 140px; /* HARD CAP on image size */
+	max-width: 140px;
+	/* HARD CAP on image size */
 	height: auto;
 	border: 1px solid #ccc;
 }
@@ -383,6 +396,7 @@ header .contact-item:hover img {
 	.research-item {
 		grid-template-columns: 1fr;
 	}
+
 	.research-image img {
 		max-width: 100%;
 	}
