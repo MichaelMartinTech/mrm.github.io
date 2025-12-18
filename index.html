@@ -1,637 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- Always force the browser to get a fresh copy of the page -->
-      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-      <meta http-equiv="Pragma" content="no-cache">
-      <meta http-equiv="Expires" content="0">
-      <title>Michael R. Martin</title>
-      <!-- Fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-      <!-- Add version strings to every asset -->
-      <link rel="stylesheet" href="style.css?v=1.0.0">
-      <link rel="icon" href="assets/favicon.ico?v=1.0.0">
-   </head>
-   <body>
-      <header>
-         <div class="header-buttons">
-            <button id="theme-toggle">Dark Mode</button>
-            <a href="assets/MRM_CV.pdf"
-               class="cv-button"
-               target="_blank">CV</a>
-         </div>
-         <h1>Michael R. Martin</h1>
-         <p>Ph.D. Student & Graduate Student Researcher<br>
-         <p>Department of Computer Science<br>
-            <a href="https://www.ucdavis.edu/">University of California, Davis</a>
-         </p>
-         <div class="contact-row">
-            <a href="https://github.com/MichaelMartinTech" class="contact-item" target="_blank">
-            <img src="assets/icons/github.svg" alt="GitHub icon"> GitHub
-            </a>
-            <a href="https://www.researchgate.net/profile/M-Martin-10" class="contact-item" target="_blank">
-            <img src="assets/icons/researchgate.svg" alt="ResearchGate icon"> ResearchGate
-            </a>
-            <a href="https://orcid.org/0009-0001-1528-9965" class="contact-item" target="_blank">
-            <img src="assets/icons/orchid.svg" alt="Orchid icon"> Orchid
-            </a>
-            <a href="https://scholar.google.com/citations?hl=en&user=d2N1H0QAAAAJ&view_op=list_works&authuser=2&gmla=AGd7smG_vssD5Pq0snPrT2XIoVueqAfh_Ts_vlHZI_9Kr6xDjPOdfDqAjKJKxbZPe0iGzePIzL5fOa_lMSfAm_3n" class="contact-item" target="_blank">
-            <img src="assets/icons/googlescholar.svg" alt="Google Scholar icon"> Google Scholar
-            </a>
-         </div>
-         <div class="contact-row">
-            <a href="https://www.linkedin.com/in/martin-portfolio" class="contact-item" target="_blank">
-            <img src="assets/icons/linkedin.svg" alt="LinkedIn icon"> LinkedIn
-            </a>
-            <a class="contact-item js-email" aria-label="Email address">
-            <img src="assets/icons/email.svg" alt="Email icon">
-            <span>csemartin[at]ucdavis[dot]edu</span>
-            </a>
-         </div>
-         <!-- Bookmarks live under the name while at top -->
-         <nav id="top-nav">
-            <div class="top-nav-links">
-               <a href="#home">Home</a>
-               <a href="#education">Education</a>
-               <a href="#experience">Research/Professional Experience</a>
-               <a href="#publications">Publications</a>
-               <a href="#leadership">Projects & Leadership</a>
-               <a href="#grants">Grants/Fellowships</a>
-               <a href="#awards">Honors/Awards</a>
-               <a href="#teaching">Teaching</a>
-               <a href="#technical-skills">Technical Skills</a>
-               <a href="#affiliations">Affiliations</a>
-               <a href="#prodev">Professional Development</a>
-               <a href="#contact">Contact</a>
-            </div>
-         </nav>
-      </header>
-      <button id="top-toggle" aria-label="Toggle bookmarks">˄</button>
-      <main>
-         <!-- ===== HOME SECTION ===== -->
-         <section id="home">
-            <!-- Example: <img src="assets/headshot.jpg" alt="Michael R. Martin portrait" class="headshot"> -->
-            <p style="margin-top: 20px;">
-            <h2>About</h2>
-            Michael Martin is a Ph.D Student and <a href="https://www.cs.ucdavis.edu/~ma/people.html">Graduate Student Researcher</a> at <a href="https://vidi.cs.ucdavis.edu/">Visualization & Interface Design Innovation (VIDi) Lab</a> 
-            at the University of California, Davis, advised by <a href="https://www.cs.ucdavis.edu/~ma/">Dr. Kwan-Liu Ma</a>.
-            His expertise spans the integration of <b>computer graphics, virtual and augmented reality (VR/AR), interactive software, 
-            artificial intelligence (AI), machine learning (ML), explainable AI (XAI),</b> and <b>scientific visualization.</b>
-            </p>
-            <p>
-               He has designed and developed intelligent, user-centered systems that integrated immersion, analysis, and insights bridging 
-               art, science, and engineering. His research created interdisciplinary tools for broad scientific and engineering applications, 
-               real-time simulation, and interactive media that advanced scientific understanding, creativity, and human experience in complex digital environments.
-         </section>
-         <section>
-	<h2>Current Research</h2>
-
-	<!-- ===== Project 1 ===== -->
-	<div class="research-item">
-		<div class="research-image">
-			<img src="assets/Xpert.png" alt="Mechanistic Interpretability preview">
-		</div>
-
-		<div class="research-content">
-			<h3>Mechanistic Interpretability of Structured Signals in Generative Vision Systems</h3>
-
-			<p>
-				Examining how structured perturbations propagate through generative vision models to expose internal mechanisms, feature hierarchies, and robustness properties.
-			</p>
-
-			<div class="research-links">
-				<a href="https://michaelmartintech.github.io/assets/Xpert.pdf" class="cv-button" target="_blank">Summary</a>
-				<a href="https://arxiv.org/abs/2512.08329" class="cv-button" class="cv-button" target="_blank">arXiv</a>
-				<a href="https://doi.org/10.13140/RG.2.2.32382.45126" class="cv-button" target="_blank">Presentation</a>
-				<a href="https://doi.org/10.13140/RG.2.2.15151.39849" class="cv-button" target="_blank">Proposal</a>
-				<a href="https://github.com/MichaelMartinTech/Adversarial-Perturbation" class="cv-button" target="_blank">Code</a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Always force the browser to get a fresh copy of the page -->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>Michael R. Martin</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+		<!-- Add version strings to every asset -->
+		<link rel="stylesheet" href="style.css?v=1.0.0">
+		<link rel="icon" href="assets/favicon.ico?v=1.0.0">
+	</head>
+	<body>
+		<header>
+			<div class="header-buttons">
+				<button id="theme-toggle">Dark Mode</button>
+				<a href="assets/MRM_CV.pdf"
+					class="cv-button"
+					target="_blank">CV</a>
 			</div>
-		</div>
-	</div>
-
-	<details>
-		<summary>Perturbation Summary</summary>
-		<iframe
-			src="https://michaelmartintech.github.io/assets/Xpert.pdf#page=1"
-			width="100%"
-			height="450px"
-			style="border: 1px solid #ccc; margin-top: 10px;"
-		></iframe>
-	</details>
-
-	<hr>
-
-	<!-- ===== Project 2 ===== -->
-	<div class="research-item">
-		<div class="research-image">
-			<img src="assets/AIVER.png" alt="AIVER preview">
-		</div>
-
-		<div class="research-content">
-			<h3>Neural Representations for Interactive Exploration of Complex Volumetric Data</h3>
-
-			<p>
-				Developing neural scene and field representations that support interactive analysis and visualization of high-dimensional volumetric datasets.
+			<h1>Michael R. Martin</h1>
+			<p>Ph.D. Student & Graduate Student Researcher<br>
+			<p>Department of Computer Science<br>
+				<a href="https://www.ucdavis.edu/">University of California, Davis</a>
 			</p>
-
-			<div class="research-links">
-				<a href="https://michaelmartintech.github.io/assets/AIVER.pdf" class="cv-button" target="_blank">Summary</a>
-				<a href="https://doi.org/10.13140/RG.2.2.27634.36807" class="cv-button" target="_blank">Proposal</a>
+			<div class="contact-row">
+				<a href="https://github.com/MichaelMartinTech" class="contact-item" target="_blank">
+				<img src="assets/icons/github.svg" alt="GitHub icon"> GitHub
+				</a>
+				<a href="https://www.researchgate.net/profile/M-Martin-10" class="contact-item" target="_blank">
+				<img src="assets/icons/researchgate.svg" alt="ResearchGate icon"> ResearchGate
+				</a>
+				<a href="https://orcid.org/0009-0001-1528-9965" class="contact-item" target="_blank">
+				<img src="assets/icons/orchid.svg" alt="Orchid icon"> Orchid
+				</a>
+				<a href="https://scholar.google.com/citations?hl=en&user=d2N1H0QAAAAJ&view_op=list_works&authuser=2&gmla=AGd7smG_vssD5Pq0snPrT2XIoVueqAfh_Ts_vlHZI_9Kr6xDjPOdfDqAjKJKxbZPe0iGzePIzL5fOa_lMSfAm_3n" class="contact-item" target="_blank">
+				<img src="assets/icons/googlescholar.svg" alt="Google Scholar icon"> Google Scholar
+				</a>
 			</div>
-		</div>
-	</div>
-
-	<details>
-		<summary>AIVER Summary</summary>
-		<iframe
-			src="https://michaelmartintech.github.io/assets/AIVER.pdf#page=1"
-			width="100%"
-			height="450px"
-			style="border: 1px solid #ccc; margin-top: 10px;"
-		></iframe>
-	</details>
-
-	<hr>
-
-	<!-- ===== Project 3 ===== -->
-	<div class="research-item">
-		<div class="research-image">
-			<img src="assets/ProneVR.png" alt="ProneVR preview">
-		</div>
-
-		<div class="research-content">
-			<h3>Embodied XR Systems for Immersive Interaction</h3>
-
-			<p>
-				Designing embodied XR systems that integrate real-time graphics, spatial audio, and intelligent agents for immersive interaction and therapeutic applications.
-			</p>
-
-			<div class="research-links">
-				<a href="https://michaelmartintech.github.io/assets/proneVR.pdf" class="cv-button" target="_blank">Summary</a>
-				<a href="https://github.com/MichaelMartinTech/ProneVR-Demo" class="cv-button" target="_blank">Demo</a>
-				<a href="https://github.com/MichaelMartinTech/ProneVR-Demo/tree/main/VR_WaterDemo" class="cv-button" target="_blank">Cpde</a>
+			<div class="contact-row">
+				<a href="https://www.linkedin.com/in/martin-portfolio" class="contact-item" target="_blank">
+				<img src="assets/icons/linkedin.svg" alt="LinkedIn icon"> LinkedIn
+				</a>
+				<a class="contact-item js-email" aria-label="Email address">
+				<img src="assets/icons/email.svg" alt="Email icon">
+				<span>csemartin[at]ucdavis[dot]edu</span>
+				</a>
 			</div>
-		</div>
-	</div>
-
-	<details>
-		<summary>ProneVR Summary</summary>
-		<iframe
-			src="https://michaelmartintech.github.io/assets/proneVR.pdf#page=1"
-			width="100%"
-			height="450px"
-			style="border: 1px solid #ccc; margin-top: 10px;"
-		></iframe>
-	</details>
-
-</section>
-
-         <!-- ===== EXPERIENCE ===== -->
-         <section id="education">
-            <h2>Education</h2>
-            <b>Ph.D. Student, Computer Science — University of California, Davis, CA</b> (Sept 2025 – Present)<br>
-            Visualization & Interface Design Innovation (VIDi) Lab<br>
-            Advisor: Dr. Kwan-Liu Ma<br>
-            Fully funded (5 years) via Research Assistantship and Graduate Fellowship<br>
-            Excellence Graduate Coursework (UC Davis): Explainable AI with Visualization, Computer & Information Security
-            <p></p>
-            <b>B.Sc., Computer Science & Engineering (Major); Digital Interactive Game Design (Minor) University of Nevada, Reno</b> (Aug 2020 – May 2025)<br>
-            GPA: 3.69 / 4.00 | NASA Undergraduate Fellowship<br>
-            Graduate-Level Coursework as an Undergrad (UNR): Computer Graphics, Virtual Reality, Pattern Recognition, Human-Computer Interaction, Advanced Game Design, Game Engine Architecture, Big Data
-            <p></p>
-            <b>Computer Science Coursework (Transferred) University of Washington</b> (Sept 2019 – Jun 2020)<br> 
-            GPA: 3.77 / 4.00 | Merit-Based Undergraduate Fellowship
-         </section>
-         <section id="experience">
-            <h2>Research & Professional Experience</h2>
-            <p><b>Ph.D. Graduate Student Researcher</b>, UC Davis Fellowship, <a href="https://www.cs.ucdavis.edu/~ma/people.html">Visualization & Interface Design Innovation (VIDi) Lab</a>, University of California, Davis, CA, September 2025 – Present<br>
-               Advisor: Dr. Kwan-Liu Ma
-            </p>
-            <ul>
-               <li>Developing <b>ProneVR</b> (<a href="assets/MRM_Constraint_Aware_Interactive_Systems.pdf" target="_blank">Project Summary</a> · <a href="https://github.com/MichaelMartinTech/ProneVR-Demo/tree/main/VR_WaterDemo" target="_blank">Code</a> · <a href="https://github.com/MichaelMartinTech/ProneVR-Demo" target="_blank">Demo</a>), an immersive audiovisual therapy tool for surgical patients, built in Unity with integrated shader programming, volumetric lighting, and real-time computer graphics.</li>
-               <p>> Designed and implemented 3D spatial audio using raycasting for realistic underwater acoustic immersion; scripted and designed custom audio behaviors in Unity (C#). </p>
-               <p>> Developed AI-based collision-evasion and pathfinding algorithms for autonomous fish agents in a dynamic underwater scene.</p>
-               <p></p>
-               <li><b>Explainable AI for Text-to-Image Diffusion Models</b>:
-                  Conducting explainable-AI research on text-to-image diffusion models, examining the impact of data perturbations on model behavior and protection robustness (<a href="assets/MRM_Mechanistic_Interpretability_Generative_Vision.pdf" target="_blank">Project Summary</a> · <a href="https://github.com/MichaelMartinTech/Adversarial-Perturbation" target="_blank">Code</a> · <a href="https://doi.org/10.13140/RG.2.2.15151.39849" target="_blank">Proposal</a> · <a href="https://doi.org/10.13140/RG.2.2.32382.45126" target="_blank">Presentation</a> · <a href="https://doi.org/10.13140/RG.2.2.29027.00808" target="_blank">Technical Report</a> · <a href="https://youtu.be/epeI190gSzU?si=ijTzYidFoZDlCiuo" target="_blank">Video</a> · <a href="https://arxiv.org/abs/2512.08329" target="_blank">arXiv</a>).
-               </li>
-               <p></p>
-               <li>Working on a <b>Real-Time VR Volume Rendering</b> project; developing an OpenXR-based interface for the OVR renderer and exploring Gaussian-splatting methods for interactive volume visualization. (<a href="assets/MRM_Gaussian_Scene_Representations_Volumetric_Analysis.pdf" target="_blank">Project Summary</a>)</li>
-               <p></p>
-               <li>Contributed to <b>4D (3D + time) volume rendering</b> using GPU acceleration and CUDA-based graphics techniques for scientific visualization.</li>
-               <p></p>
-               <p>
-                  ><b> Collaborated with VIDi Lab researchers</b>; delivered weekly technical progress reports and demos.
-               </p>
-            </ul>
-            <p><b>NASA Undergraduate Research Fellow</b> – <a href="https://nasa.epscorspo.nevada.edu/wp-content/uploads/2025/01/Updated-Bio-_Michael-Martin.pdf" target="_blank">Nevada NASA Space Grant</a>, Desert Research Institute (DRI), Reno, NV & University of Nevada, Reno, NV, May 2024 – August 2025<br>
-               Advisors: Dr. Lei Yang and Dr. Hans Moosmüller | Program Director: Dr. Eric Wilcox
-            </p>
-            <ul>
-               <li>Developed a NASA Space Grant-funded research proposal, <i>"Advancing Predictive Modeling in Earth Science through Artificial Intelligence"</i> (<a href="https://doi.org/10.13140/RG.2.2.18624.34567" target="_blank">ResearchGate</a>).</li>
-               <li>Designed ensemble and deep learning models to predict wildfire and smoke dispersion.</li>
-               <li>Analyzed large-scale NASA remote sensing data related to wildfires in western U.S.</li>
-               <li>First author of a manuscript in preparation for peer-reviewed submission.</li>
-               <li>Presented research at the Data Science Conference and the Nevada NASA Statewide Meeting.</li>
-            </ul>
-            <p><b>Researcher & Software Developer</b> – Science & Mathematics of AI Modeling for Research and Technology (<a href="https://www.dri.edu/labs/smart-laboratory/" target="_blank">SMART</a>) Laboratory, Desert Research Institute, Reno, NV, May 2023 – August 2025<br>
-               Supervisor: Dr. Hans Moosmüller | Mentor: Dr. Lei Yang & Dr. Kailong Li 
-            </p>
-            <ul>
-               <li>Contributed to code development and experimental validation for lab publications.</li>
-               <li>Contributed to developing detailed explainable AI (XAI) and ML tasks for proposals submitted to NOAA & CAL FIRE.</li>
-               <li>Developed ML models for wildfire prediction as part of NASA EBSCoR Projects.</li>
-               <li>Co-authored two peer-reviewed papers (one published and one under review.)</li>
-               <li>Presented research as first author at the AMS national conference.</li>
-            </ul>
-            <p><b>Research Assistant</b> – Organic Analytical Lab, Desert Research Institute, NV, May 2022 – May 2023<br>
-               Supervisor: Dr. Andrey Khlystov | Mentor: Dr. Kevin Axelrod
-            </p>
-            <ul>
-               <li>Developed code for data analysis and visualization for an NIH-funded research project.</li>
-               <li>Processed large-scale datasets and contributed to analytical discussions.</li>
-               <li>Prepared technical reports summarizing research findings.</li>
-            </ul>
-            <p><b>Research Intern</b> – Robotics Laboratory, University of Nevada, Reno, NV, October 2018 – May 2019<br>
-               Advisor: Dr. Monica Nicolescu
-            </p>
-            <ul>
-               <li>Assisted with C++ modules for robotic simulations.</li>
-            </ul>
-         </section>
-         <!-- Add more experiences by duplicating <p><b>...</b></p> + <ul>...</ul> -->
-         <!-- ===== NEWS ===== 
-            <section id="news">
-            	<h2>News</h2>
-            	<ul>
-            		<li><b>[Nov 5, 2025]</b> Updated Contact Section</li>
-            		<li><b>[Nov 5, 2025]</b> Website launched</li>
-            	</ul>
-            </section> -->
-         <!-- Note to self: Add future updates by duplicating the <li> line above -->
-         <!-- ===== PUBLICATIONS ===== -->
-         <section id="publications">
-            <h2>Peer-Reviewed Publications</h2>
-            <ul>
-               <li>
-                  Barjeste Vaezi, R., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2025).
-                  <i>Impacts of Wildfire Smoke Aerosols on Radiation, Clouds, Precipitation, Climate, and Air Quality.</i> 
-                  <em>Atmospheric Environment X</em>, Elsevier, 26, 100322. 
-                  <a href="https://doi.org/10.1016/j.aeaoa.2025.100322" target="_blank">DOI</a> <b>(Published)</b>
-               </li>
-               <li>
-                  Li, K., <b>Martin, M. R.</b>, Wang, X. (2025).
-                  <i>Stepwise Clustered Ensemble (SCE): An R Package for Interpretable and Robust Regression in Environmental Modeling.</i> 
-                  Manuscript Number: ENVSOFT-D-25-02742
-                  <em>Journal of	Environmental Modelling and Software</em> (Under Review · Manuscript #ENVSOFT-D-25-02742)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Yang, L., Moosmüller, H. (2025).
-                  <i>Deep Learning Framework for Predicting Wildfire Smoke Dispersion from Satellite Remote Sensing Data.</i> 
-                  <em>In preparation</em> (In Preparation).
-               </li>
-            </ul>
-            <h2>Research Proposals</h2>
-            <ul>
-               <li>
-                  <b>Martin, M. R.</b> (2025). 
-                  <i>Visualizing the Impact of Data Perturbation on Text-to-Image Models using Explanative AI (XAI).</i> Authored a research proposal and presented at Explainable AI Using Visualization, University of California, Davis. (<a href="https://www.researchgate.net/publication/397702472_Visualizing_the_Impact_of_Data_Perturbation_on_Text-to-Image_Models_using_Explanative_AI_XAI" target="_blank">ResearchGate</a>)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b> (2025). 
-                  <i>Enhancing Wildland Fire Predictability and Resilience Under Extreme Weather: An Innovative Physics-Guided AI/ML Model. </i> 
-                  Contributed to proposal narrative and AI/ML methodology. Submitted to CAL FIRE. 
-               </li>
-               <li>
-                  <b>Martin, M. R.</b> (2024).
-                  <i>Advancing Predictive Modeling in Earth Science through Artificial Intelligence.</i> 
-                  Authored proposal funded by NASA Space Grant Undergraduate Research Fellowship.
-                  <a href="https://doi.org/10.13140/RG.2.2.18624.34567" target="_blank">ResearchGate</a>
-               </li>
-            </ul>
-            <h2>Technical Reports</h2>
-            <ul>
-               <li>
-                  <b>Martin, M. R.</b> (2025).
-                  <i>Advancing Predictive Modeling in Earth Science through Artificial Intelligence. </i> 
-                  Final Technical Report to NASA Space Grant Program.
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Cao, R., Mamaril, J., Marsala, M. (2024).
-                  <i>Development of an Innovative Mentorship Platform: Plato.</i> 
-                  Undergraduate Capstone Project, University of Nevada, Reno, 171 pp. 
-                  <a href="https://doi.org/10.13140/RG.2.2.23657.51043" target="_blank">ResearchGate</a> (<a href="https://github.com/Mamaril-Jeremy/CS425-Project" target="_blank">Code</a>)
-               </li>
-            </ul>
-            <h2>Conference Publications</h2>
-            <ul>
-               <li>
-                  <b>Martin, M. R.</b> & Chan, G. (2025). 
-                  <i>Explanative AI for Analyzing the Impacts of Data Purification on Image Models</i>
-                  , Explainable AI using Visualization, University of California, Davis (Talk). 
-                  <a href="https://www.researchgate.net/publication/397702695_Explainable_AI_for_Analyzing_the_Impact_of_Data_Perturbation_on_Image_AI_Models" target="_blank">ResearchGate</a>
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Yang, L., Moosmüller, H. (2025).
-                  <i>Advancing Earth Science Predictive Modeling through Machine Learning and Deep Learning: A Multidisciplinary Approach</i> 
-                  2025 Nevada NASA Space Grant Statewide Meeting  
-                  <a href="https://nasa.epscorspo.nevada.edu/wp-content/uploads/2025/04/Martin_poster.pdf" target="_blank">NASA</a>
-                  <a href="https://doi.org/10.13140/RG.2.2.28797.06881" target="_blank">ResearchGate</a> (Poster Presentation)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Yang, L., Hosseinpour, F. (2025).
-                  <i>Leveraging Machine Learning and NASA Satellite Data to Improve Wildfire Smoke Prediction and Environmental Insights.</i> 
-                  <em>Data Science Conference</em>, Reno, NV, February 18–20, 2025. 
-                  <a href="https://doi.org/10.13140/RG.2.2.32402.36808" target="_blank">ResearchGate</a> (Poster Presentation)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Yang, L., Hosseinpour, F. (2025).
-                  <i>Harnessing Machine Learning and NASA Satellite Big Data for Enhanced Wildfire Smoke Prediction and Air Quality Forecasting.</i> 
-                  <em>Data Science Conference</em>, Reno, NV, February 18–20, 2025. 
-                  <a href="https://doi.org/10.13140/RG.2.2.28208.06406" target="_blank">ResearchGate</a> Invited Undergraduate Speaker, Research Lightning Talk (Panel of Speakers)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Mehdizadeh, G., Barjeste Vaezi, R., Erfani, E., Hosseinpour, F. E. (2024).
-                  <i>Predictive Modeling in Environmental Science with Machine Learning Algorithms.</i> 
-                  American Meteorological Society (AMS) 104th Annual Meeting, Baltimore, MD, January 29, 2024. <a href="https://www.researchgate.net/publication/377927435_Predictive_Modeling_in_Environmental_Science_with_Machine_Learning_Algorithms" target="_blank">ResearchGate</a>
-                  (Poster Presentation)
-               </li>
-               <li>
-                  Barjeste Vaezi, R., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2024).
-                  <i>Machine Learning for Exploring Wildfire Smoke Emissions: A Data-Driven Approach.</i> 
-                  2024 Nevada NASA Statewide Meeting, April 2024. 
-                  <a href="https://www.researchgate.net/publication/379953800_Machine_Learning_for_Exploring_Wildfire_Smoke_Emissions_A_Data-Driven_Approach" target="_blank">ResearchGate</a> (Talk)
-               </li>
-               <li>
-                  Barjeste Vaezi, R., Mehdizadeh, G., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2024).
-                  <i>Machine Learning Approach for Enhanced Understanding of California’s Wildfire Smoke.</i> 
-                  American Meteorological Society (AMS) 104th Annual Meeting, Baltimore, MD, January 28–February 1, 2024. 
-                  <a href="https://www.researchgate.net/publication/377927805_Machine_Learning_Approach_for_Enhanced_Understanding_of_California's_Wildfire_Smoke" target="_blank">ResearchGate</a> 
-                  (Poster Presentation)
-               </li>
-               <li>
-                  Mehdizadeh, G., Hosseinpour, F. E., <b>Martin, M. R.</b>, Barjeste Vaezi, R., Erfani, E., McDonough, F. (2024).
-                  <i>Cloud Seeding Effects on Snowfall: Insights from Microphysical Model and Satellite Remote Sensing.</i> 
-                  <em>American Meteorological Society (AMS) 104th Annual Meeting</em>, Baltimore, MD, January 28–February 1, 2024. <a href="https://www.researchgate.net/publication/377926676_Cloud_Seeding_Effects_on_Snowfall_Insights_from_Microphysical_Model_and_Satellite_Remote_Sensing" target="_blank">ResearchGate</a> 
-                  (Poster Presentation)
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Cao, R., Mamaril, J., Marsala, M. (2024).
-                  <i>Development of an Innovative Mentorship Platform: Plato.</i> 
-                  <em>Innovation Day Competition</em>, University of Nevada, Reno, NV, May 2024. 
-                  <a href="http://dx.doi.org/10.13140/RG.2.2.27012.95361" target="_blank">ResearchGate</a> (Oral Presentation) Public Choice Award Winner
-               </li>
-               <li>
-                  <b>Martin, M. R.</b>, Cao, R., Jones, J., Mamaril, J., Marsala, M. (2024).
-                  <i>Innovative Mentorship Platform: Plato.</i> 
-                  <em>Sontag Entrepreneurship Competition</em>, University of Nevada, Reno, NV, January 2024. 
-                  <a href="http://dx.doi.org/10.13140/RG.2.2.33723.84006" target="_blank">ResearchGate</a> (Pitch Presentation) Round 2 Winner
-               </li>
-            </ul>
-            <!-- To add a new publication:
-               Copy and paste a <li>...</li> block above, and edit the authors, title, and links. -->
-         </section>
-         <!-- ===== LEADERSHIP ==== -->
-         <section id="leadership">
-            <h2>Projects & Leadership</h2>
-            <ul>
-               <b>Real-Time VR Volume Rendering System — UC Davis</b> (2025 – present)<br>
-               Developing a VR volume-rendering pipeline integrating OpenXR with the OVR renderer and exploring Gaussian-splatting acceleration. Collaborator: Dr. David Bauer (Meta) • Advisor: Dr. Kwan-Liu Ma.
-               <p></p>
-               <b>ProneVR Project — UC Davis </b>(2025 – present)<br>
-               Developed an immersive therapeutic VR platform integrating real-time rendering, shader-based visual effects, spatial acoustics, and AI-driven interactive simulation. Advisor: Dr. Kwan-Liu Ma.
-               <p></p>
-               <b>Explainable AI for Text-to-Image Diffusion Models — UC Davis </b>(2025 – present)<br>
-               Investigating the impact of data perturbation on diffusion models using explainable-AI techniques to interpret model behavior, protection robustness, and feature-level responses to artist-focused poisoning methods. Collaborator: Garrick Chan • Advisor: Dr. Kwan-Liu Ma.
-               <p></p>
-               <b>SensePhase — Independent R&D</b> (2025 – present)<br>
-               Independent R&D in AI, AR/VR, interactive media, computer graphics, and explainable AI systems. 
-               <p></p>
-               <b>Fire Season Simulation Project — ACM Hackathon </b>(2025)<br>
-               Developed a real-time wildfire simulation with grid-based procedural terrain, raycasting-based interaction, adaptive AI balancing, and interactive UI systems (Godot).
-               <p></p>
-               <b>VR Software for Medical/Ocular Diagnosis </b>(2024)<br>
-               Developed a VR-based visual field assessment prototype in Unity (C#), integrating interface design and desktop simulation workflows to explore software-based ophthalmic diagnostics. (Patent in progress)
-               <p></p>
-               <b>Plato Mentorship Platform – Capstone Project </b>(2023 – 2024) <br>
-               Designed and implemented a scalable web-based mentorship platform using Svelte/SvelteKit, Firebase, and API integrations; developed matching logic and user interface systems (<a href="https://github.com/Mamaril-Jeremy/CS425-Project" target="_blank">GitHub</a>)
-               <p></p>
-               <b>Interactive Media & Simulation Prototypes – Independent </b>(2016 – 2024) 
-               <li>
-                  Built real-time interactive simulation systems with 2D/3D animation, rendering, procedural visuals, physics, AI behaviors, audio-visual integration, 3D acoustic feedback, lighting, raycasting, database systems, and performance-optimized pipelines using engines such as Unity and Godot.
-               </li>
-               <li>
-                  Created simulation prototypes, including a naval navigation system with AI pathfinding (<a href="https://github.com/MichaelMartinTech/NavySimulation_2023.git" target="_blank">GitHub</a>), a Solar system model (<a href="https://github.com/MichaelMartinTech/Solar_System_Simulation.git" target="_blank">GitHub</a>),  a Breakthrough chess variant with AI opponent (<a href="https://github.com/MichaelMartinTech/GameDev_IMadeABreakthrough.git" target="_blank">GitHub</a>), and an 8-Puzzle solver visualizing search algorithms (<a href="https://github.com/MichaelMartinTech/GameDev_8PuzzleSolver.git" target="_blank">GitHub</a>).
-               </li>
-               <p></p>
-               <b>Electronic Music, Spatial Audio & Sound Design – Independent</b> (2016 – present)<br>
-               Self-directed exploration of digital sound design, spatial audio, and aucoustics simulation acoustics simulation, with applications to interactive and immersive media, including VR environments
-            </ul>
-         </section>
-         <!-- ===== Grants and Fellowships ===== -->
-         <section id="grants">
-            <h2>Grants & Fellowships</h2>
-            <ul>
-               <li><b>Excellence Graduate Fellowship</b>, Graduate Group in Computer Science (GGCS), University of California, Davis (2025 – 2026).</li>
-               <li><b>NASA Space Grant Undergraduate Fellowship</b>, Nevada NASA Programs (2024 – 2025)
-                  Awarded for an independent research proposal in AI/ML for environmental modeling..
-               </li>
-               <li><b>Merit-Based Computer Science Fellowship</b>, University of Washington (2019 – 2020).</li>
-               <li><b>Millennium Scholarship</b> (Merit-Based), Nevada State Treasurer's office (2020 – 2024).</li>
-            </ul>
-         </section>
-         <!-- ===== AWARDS ===== -->
-         <section id="awards">
-            <h2>Honors & Awards</h2>
-            <ul>
-               <li><b>ACM Hackathon Winner</b> – Public Choice Award, University of Nevada, Reno, May 2025.<br>
-                  Recognized for developing Fire Season, an interactive media project completed in under 30 hours at a
-                  highly competitive Northern Nevada hackathon with over 100 participants.
-               </li>
-               <li><b>Public Choice Award</b>, Innovation Day Competition, University of Nevada-Reno, NV, May 2024<br>
-                  Selected among 300+ engineering students from seven disciplines for an innovative capstone project.
-               </li>
-               <li><b>Round 2 Winner</b>, Sontag Entrepreneurship Competition, University of Nevada, Reno, January 2024<br>
-                  Developed and delivered a pitch presentation for Plato, an innovative mentorship platform, selected for
-                  advancement in the university’s entrepreneurship showcase.
-               </li>
-               <li><b>Best Camera Use</b>, Programming with Animation Competition, University of Washington, March 2020.</li>
-               <li><b>U.S. President’s Award for Outstanding Academic Excellence</b>, signed by President Obama, 2016.</li>
-               <li><b>Top Nevada Finalist (National Competition)</b>, MathCON Mathematics Contest, University of Chicago, 2016.</li>
-               <li><b>National Honor Society Academic Excellence Award</b>, 2018 & 2019.</li>
-            </ul>
-         </section>
-         <!-- ===== TEACHING ===== -->
-         <section id="teaching">
-            <h2>Teaching Experience</h2>
-            <ul>
-               <li><b>Tutor</b> – University Tutoring Center, University of Nevada, Reno, 2020 – 2022<br>
-               </li>
-               <li><b>Tutor</b> – Robert McQueen High School, Reno, 2017 – 2019<br>
-                  <b>Subjects:</b> AP Physics, AP Calculus, Trigonometry, Geometry, Algebra
-               </li>
-            </ul>
-         </section>
-         <!-- ==== Technical Skills ==== -->
-         <section id="technical-skills">
-            <h2>Technical Skills</h2>
-            <table>
-               <tr>
-                  <th>Programming Languages</th>
-                  <td>C#, C++, Python, Java, JavaScript, Lua, GDScript, ActionScript, SQL, Scheme, Arduino C++, Assembly</td>
-               </tr>
-               <tr>
-                  <th>Computer Graphics & Visualization</th>
-                  <td>OpenGL, GLFW, SOIL2, Assimp, Ogre3D; Unity (animation, UI), Blender (3D modeling, sculpting, texturing); Shaders, Scene Graphs, Matrix Stacks, Texture Handling, Lighting Calculation, Callback Functions Handling, OpenGL Context Creation.</td>
-               </tr>
-               <tr>
-                  <th>Virtual Reality & Interactive Systems</th>
-                  <td>Unity (C#, C++), Godot, Roblox Studio (Lua), Love2D (Lua); systems-level implementation of raycasting, physics-based simulation, real-time feedback environments, AI behavior trees, acoustic modeling</td>
-               </tr>
-               <tr>
-                  <th>AI / Machine Learning</th>
-                  <td>PyTorch, TensorFlow, scikit-learn; Deep Learning (CNN, LSTM), Ensemble Methods (Random Forest, Decision Trees), Algorithmic AI (A*, MinMax), Explainable AI (XAI)</td>
-               </tr>
-               <tr>
-                  <th>Data & Scientific Computing</th>
-                  <td>Pandas, NumPy, NoSQL, JSON; predictive modeling, big data analytics, pattern recognition, time-series analysis</td>
-               </tr>
-               <tr>
-                  <th>Music, Acoustics Simulation, and Sound Design</th>
-                  <td>Unity (C#), Lua, Ableton Live, Audacity, Logic Pro, FL Studio; 3D spatial audio scripting, real-time sound rendering, environmental acoustics, and acoustic raycasting; procedural audio generation, UI-triggered audio events, and spatial sound design.</td>
-               </tr>
-               <tr>
-                  <th>Web & Full-Stack Development</th>
-                  <td>HTML, CSS, JavaScript, Svelte, SvelteKit, Firebase, Cloudflare; responsive interfaces, authentication, and cloud storage integration</td>
-               </tr>
-               <tr>
-                  <th>IDE / Development Tools</th>
-                  <td>GitHub, Visual Studio, VS Code, Jupyter Notebook, Google Colab, Spyder</td>
-               </tr>
-               <tr>
-                  <th>Operating Systems</th>
-                  <td>Linux/Unix, macOS, Windows</td>
-               </tr>
-               <tr>
-                  <th>Cloud / API Integration</th>
-                  <td>Google Cloud Vision API, SightEngine</td>
-               </tr>
-            </table>
-         </section>
-         <!-- ===== AFFILIATIONS ===== -->
-         <section id="affiliations">
-            <h2>Professional Affiliations</h2>
-            <ul>
-               <li><b>Member</b>, Association for the Advancement of Artificial Intelligence (AAAI), 2024 – present.</li>
-               <li><b>Member</b>, Association for Computing Machinery (ACM), 2018 – present.</li>
-               <li><b>Member</b>, Google Developer Groups (GDG), University of Nevada, Reno, NV, 2024 – present<br>
-                  Participated in meetings and technical discussions; expanded professional network with local developers.
-               </li>
-               <li><b>Member</b>, American Meteorological Society (AMS), 2023 – present.</li>
-               <li><b>Member</b>, USA Swimming, 2015 – present.</li>
-            </ul>
-         </section>
-         <!-- ===== PROFESSIONAL DEVELOPMENT ===== -->
-         <section id="prodev">
-            <h2>Professional Development</h2>
-            <ul>
-               <li><b>Teaching Assistant Training</b>, University of California, Davis, September 2025.</li>
-               <li><b>Machine Learning Certificate</b>, Machine Learning in Python for Environmental Science Problems short course, <b>American Meteorological Society (AMS) 104th Annual Meeting</b>, Baltimore, MD, January 2024.</li>
-               <li><b>American Geophysical Union (AGU) Annual Meeting</b>, San Francisco, CA — Attended 2017, 2018, 2019.</li>
-            </ul>
-         </section>
-         <!-- ===== COURSEWORK ===== -->
-         <!--
-            <section id="coursework">
-            	<h2>Graduate Level Coursework</h2>
-            	<p>Explainable AI with Visualization, Computer & Information Security, Computer Graphics, Virtual Reality, Pattern Recognition, Human-Computer Interactions (HCI), Advanced Game Design, Game Engine Architecture, Big Data, Research</p>
-            	<h2>Upper Division Undergraduate Coursework</h2>
-            	<p>Analysis of Algorithms, Automata & Formal Languages, Data Structures, Database Management Systems, Operating Systems, Software Engineering, Computer Communication Networks, Computer Organization, Concepts and Implementation, Digital Design, Embedded Systems Design, Mathematics of Computer Science, Senior Projects in Computer Science.</p>
-            </section>
-            -->
-         <!-- ===== CONTACT ===== -->
-         <section id="contact">
-            <h2>Contact</h2>
-            <p>GitHub: <a href="https://github.com/MichaelMartinTech" target="_blank">MichaelMartinTech</a></p>
-            <p>ResearchGate: <a href="https://www.researchgate.net/profile/M-Martin-10" target="_blank">M-Martin-10</a></p>
-            <p>Orchid: <a href="https://orcid.org/0009-0001-1528-9965" target="_blank">0009-0001-1528-9965</a></p>
-            <p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=d2N1H0QAAAAJ&view_op=list_works&authuser=2&gmla=AGd7smG_vssD5Pq0snPrT2XIoVueqAfh_Ts_vlHZI_9Kr6xDjPOdfDqAjKJKxbZPe0iGzePIzL5fOa_lMSfAm_3n" target="_blank">View Profile</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/martin-portfolio" target="_blank">martin-portfolio</a></p>
-            <p>
-               Email: csemartin[at]ucdavis[dot]edu
-            </p>
-         </section>
-      </main>
-      <footer>
-         <p>All Rights Reserved © Michael R. Martin, 2025 - Present</p>
-      </footer>
-      <script>
-         const toggle = document.getElementById('theme-toggle');
-         const root = document.documentElement;
-         
-         function setTheme(theme) {
-         	root.setAttribute('data-theme', theme);
-         	localStorage.setItem('theme', theme);
-         	toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
-         }
-         
-         // Default to light unless a saved preference exists
-         const savedTheme = localStorage.getItem('theme') || 'light';
-         setTheme(savedTheme);
-         
-         toggle.addEventListener('click', () => {
-         	const current = root.getAttribute('data-theme');
-         	setTheme(current === 'dark' ? 'light' : 'dark');
-         });
-      </script>
-      <script>
-         const header = document.querySelector('header');
-         const topToggle = document.getElementById('top-toggle');
-         
-         // manual toggle
-         topToggle.addEventListener('click', () => {
-         	const isCollapsed = document.body.classList.toggle('top-collapsed');
-         	// if collapsed → show ˅ (expand available)
-         	topToggle.textContent = isCollapsed ? '˅' : '˄';
-         });
-         
-         // scroll logic
-         window.addEventListener('scroll', () => {
-         	const pastHeader = window.scrollY > header.offsetHeight;
-         
-         	if (pastHeader) {
-         		// show floating mode
-         		document.body.classList.add('scrolled');
-         		// when entering floating mode, default collapsed
-         		if (!document.body.dataset.enteredFloating) {
-         			document.body.classList.add('top-collapsed');
-         			topToggle.textContent = '˅'; // collapsed by default (show ˅ to expand)
-         			document.body.dataset.enteredFloating = 'true';
-         		}
-         	} else {
-         		// reset when back at top
-         		document.body.classList.remove('scrolled');
-         		document.body.classList.remove('top-collapsed');
-         		topToggle.textContent = '˄'; // expanded at top (˄ to collapse)
-         		delete document.body.dataset.enteredFloating;
-         	}
-         });
-         
-         // start expanded at top
-         document.body.classList.remove('top-collapsed');
-         topToggle.textContent = '˄';
-      </script>
-      <script>
-         // Smooth scroll to top when clicking "Home"
-         document.querySelector('a[href="#home"]').addEventListener('click', (event) => {
-         	event.preventDefault(); // stop default jump behavior
-         	window.scrollTo({
-         		top: 0,
-         		behavior: 'smooth'
-         	});
-         });
-      </script>
-   </body>
+			<!-- Bookmarks live under the name while at top -->
+			<nav id="top-nav">
+				<div class="top-nav-links">
+					<a href="#home">Home</a>
+					<a href="#education">Education</a>
+					<a href="#experience">Research/Professional Experience</a>
+					<a href="#publications">Publications</a>
+					<a href="#leadership">Projects & Leadership</a>
+					<a href="#grants">Grants/Fellowships</a>
+					<a href="#awards">Honors/Awards</a>
+					<a href="#teaching">Teaching</a>
+					<a href="#technical-skills">Technical Skills</a>
+					<a href="#affiliations">Affiliations</a>
+					<a href="#prodev">Professional Development</a>
+					<a href="#contact">Contact</a>
+				</div>
+			</nav>
+		</header>
+		<button id="top-toggle" aria-label="Toggle bookmarks">˄</button>
+		<main>
+			<!-- ===== HOME SECTION ===== -->
+			<section id="home">
+				<!-- Example: <img src="assets/headshot.jpg" alt="Michael R. Martin portrait" class="headshot"> -->
+				<p style="margin-top: 20px;">
+				<h2>About</h2>
+				Michael Martin is a Ph.D Student and <a href="https://www.cs.ucdavis.edu/~ma/people.html">Graduate Student Researcher</a> at <a href="https://vidi.cs.ucdavis.edu/">Visualization & Interface Design Innovation (VIDi) Lab</a> 
+				at the University of California, Davis, advised by <a href="https://www.cs.ucdavis.edu/~ma/">Dr. Kwan-Liu Ma</a>.
+				His expertise spans the integration of <b>computer graphics, virtual and augmented reality (VR/AR), interactive software, 
+				artificial intelligence (AI), machine learning (ML), explainable AI (XAI),</b> and <b>scientific visualization.</b>
+				</p>
+				<p>
+					He has designed and developed intelligent, user-centered systems that integrated immersion, analysis, and insights bridging 
+					art, science, and engineering. His research created interdisciplinary tools for broad scientific and engineering applications, 
+					real-time simulation, and interactive media that advanced scientific understanding, creativity, and human experience in complex digital environments.
+			</section>
+			<section>
+				<h2>Current Research</h2>
+				<!-- ===== Project 1 ===== -->
+				<div class="research-item">
+					<div class="research-image">
+						<img src="assets/Xpert.png" alt="Mechanistic Interpretability preview">
+					</div>
+					<div class="research-content">
+						<h3>Mechanistic Interpretability of Structured Signals in Generative Vision Systems</h3>
+						<p>
+							Examining how structured perturbations propagate through generative vision models to expose internal mechanisms, feature hierarchies, and robustness properties.
+						</p>
+						<div class="research-links">
+							<a href="https://michaelmartintech.github.io/assets/Xpert.pdf" class="cv-button" target="_blank">Summary</a>
+							<a href="https://arxiv.org/abs/2512.08329" class="cv-button" class="cv-button" target="_blank">arXiv</a>
+							<a href="https://doi.org/10.13140/RG.2.2.32382.45126" class="cv-button" target="_blank">Presentation</a>
+							<a href="https://doi.org/10.13140/RG.2.2.15151.39849" class="cv-button" target="_blank">Proposal</a>
+							<a href="https://github.com/MichaelMartinTech/Adversarial-Perturbation" class="cv-button" target="_blank">Code</a>
+						</div>
+					</div>
+				</div>
+				<details>
+					<summary>Perturbation Summary</summary>
+					<iframe
+						src="https://michaelmartintech.github.io/assets/Xpert.pdf#page=1"
+						width="100%"
+						height="450px"
+						style="border: 1px solid #ccc; margin-top: 10px;"
+						></iframe>
+				</details>
+				<hr>
+				<!-- ===== Project 2 ===== -->
+				<div class="research-item">
+					<div class="research-image">
+						<img src="assets/AIVER.png" alt="AIVER preview">
+					</div>
+					<div class="research-content">
+						<h3>Neural Representations for Interactive Exploration of Complex Volumetric Data</h3>
+						<p>
+							Developing neural scene and field representations that support interactive analysis and visualization of high-dimensional volumetric datasets.
+						</p>
+						<div class="research-links">
+							<a href="https://michaelmartintech.github.io/assets/AIVER.pdf" class="cv-button" target="_blank">Summary</a>
+							<a href="https://doi.org/10.13140/RG.2.2.27634.36807" class="cv-button" target="_blank">Proposal</a>
+						</div>
+					</div>
+				</div>
+				<details>
+					<summary>AIVER Summary</summary>
+					<iframe
+						src="https://michaelmartintech.github.io/assets/AIVER.pdf#page=1"
+						width="100%"
+						height="450px"
+						style="border: 1px solid #ccc; margin-top: 10px;"
+						></iframe>
+				</details>
+				<hr>
+				<!-- ===== Project 3 ===== -->
+				<div class="research-item">
+					<div class="research-image">
+						<img src="assets/ProneVR.png" alt="ProneVR preview">
+					</div>
+					<div class="research-content">
+						<h3>Embodied XR Systems for Immersive Interaction</h3>
+						<p>
+							Designing embodied XR systems that integrate real-time graphics, spatial audio, and intelligent agents for immersive interaction and therapeutic applications.
+						</p>
+						<div class="research-links">
+							<a href="https://michaelmartintech.github.io/assets/proneVR.pdf" class="cv-button" target="_blank">Summary</a>
+							<a href="https://github.com/MichaelMartinTech/ProneVR-Demo" class="cv-button" target="_blank">Demo</a>
+							<a href="https://github.com/MichaelMartinTech/ProneVR-Demo/tree/main/VR_WaterDemo" class="cv-button" target="_blank">Cpde</a>
+						</div>
+					</div>
+				</div>
+				<details>
+					<summary>ProneVR Summary</summary>
+					<iframe
+						src="https://michaelmartintech.github.io/assets/proneVR.pdf#page=1"
+						width="100%"
+						height="450px"
+						style="border: 1px solid #ccc; margin-top: 10px;"
+						></iframe>
+				</details>
+			</section>
+			<!-- ===== EXPERIENCE ===== -->
+			<section id="education">
+				<h2>Education</h2>
+				<b>Ph.D. Student, Computer Science — University of California, Davis, CA</b> (Sept 2025 – Present)<br>
+				Visualization & Interface Design Innovation (VIDi) Lab<br>
+				Advisor: Dr. Kwan-Liu Ma<br>
+				Fully funded (5 years) via Research Assistantship and Graduate Fellowship<br>
+				Excellence Graduate Coursework (UC Davis): Explainable AI with Visualization, Computer & Information Security
+				<p></p>
+				<b>B.Sc., Computer Science & Engineering (Major); Digital Interactive Game Design (Minor) University of Nevada, Reno</b> (Aug 2020 – May 2025)<br>
+				GPA: 3.69 / 4.00 | NASA Undergraduate Fellowship<br>
+				Graduate-Level Coursework as an Undergrad (UNR): Computer Graphics, Virtual Reality, Pattern Recognition, Human-Computer Interaction, Advanced Game Design, Game Engine Architecture, Big Data
+				<p></p>
+				<b>Computer Science Coursework (Transferred) University of Washington</b> (Sept 2019 – Jun 2020)<br> 
+				GPA: 3.77 / 4.00 | Merit-Based Undergraduate Fellowship
+			</section>
+			<section id="experience">
+				<h2>Research & Professional Experience</h2>
+				<p><b>Ph.D. Graduate Student Researcher</b>, UC Davis Fellowship, <a href="https://www.cs.ucdavis.edu/~ma/people.html">Visualization & Interface Design Innovation (VIDi) Lab</a>, University of California, Davis, CA, September 2025 – Present<br>
+					Advisor: Dr. Kwan-Liu Ma
+				</p>
+				<ul>
+					<li><b>ProneVR</b> (constraint-aware, controller-free XR systems) (<a href="assets/MRM_Constraint_Aware_Interactive_Systems.pdf" target="_blank">Project Summary</a> · <a href="https://github.com/MichaelMartinTech/ProneVR-Demo/tree/main/VR_WaterDemo" target="_blank">Code</a> · <a href="https://github.com/MichaelMartinTech/ProneVR-Demo" target="_blank">Demo</a>): Designed and implemented an immersive therapeutic VR environment integrating real-time rendering, shader-based visual effects, spatial audio, interactive simulation, and AI-driven agent behaviors; led system evaluation at the clinical study at UC Davis Health; first-author manuscript in preparation.</li>
+					<p></p>
+					<li><b>Diffusion-based generative model interpretability</b>:
+						(<a href="assets/MRM_Mechanistic_Interpretability_Generative_Vision.pdf" target="_blank">Project Summary</a> · <a href="https://github.com/MichaelMartinTech/Adversarial-Perturbation" target="_blank">Code</a> · <a href="https://doi.org/10.13140/RG.2.2.15151.39849" target="_blank">Proposal</a> · <a href="https://doi.org/10.13140/RG.2.2.32382.45126" target="_blank">Presentation</a> · <a href="https://doi.org/10.13140/RG.2.2.29027.00808" target="_blank">Technical Report</a> · <a href="https://youtu.be/epeI190gSzU?si=ijTzYidFoZDlCiuo" target="_blank">Video</a> · <a href="https://arxiv.org/abs/2512.08329" target="_blank">arXiv</a>): Designed and developed perturbation-based frameworks for robustness and feature-level interpretability of text-to-image diffusion models; first-author arXiv preprint and journal manuscript in preparation.
+					</li>
+					<p></p>
+					<li><b>Neural and Gaussian scene representations for volumetric visualization</b> (<a href="assets/MRM_Gaussian_Scene_Representations_Volumetric_Analysis.pdf" target="_blank">Project Summary</a>): Authored and developed a research proposal for real-time VR visualization of unstructured volumetric data using Gaussian splatting and neural-guided sampling, encompassing a scalable OpenXR-based system supporting multivariate transfer-function editing and AI-accelerated rendering.</li>
+					<p></p>
+					<li><b>GPU-Accelerated Time-Varying Volumetric Visualization</b>: Implemented CUDA-based pipelines for high-performance time-varying volumetric visualization.</li>
+					<p></p>
+					<li><b>Graduate Mentorship</b>: Provided graduate-level mentorship to a master's student on XR system architecture and XAI methodologies for generative image models.</li>
+					<p></p>
+				</ul>
+				<p><b>NASA Undergraduate Research Fellow</b> – <a href="https://nasa.epscorspo.nevada.edu/wp-content/uploads/2025/01/Updated-Bio-_Michael-Martin.pdf" target="_blank">Nevada NASA Space Grant</a>, Desert Research Institute (DRI), Reno, NV & University of Nevada, Reno, NV, May 2024 – August 2025<br>
+					Advisors: Dr. Lei Yang and Dr. Hans Moosmüller | Program Director: Dr. Eric Wilcox
+				</p>
+				<ul>
+					<li>Developed a NASA Space Grant-funded research proposal, <i>"Advancing Predictive Modeling in Earth Science through Artificial Intelligence"</i> (<a href="https://doi.org/10.13140/RG.2.2.18624.34567" target="_blank">ResearchGate</a>).</li>
+					<li>Designed ensemble and deep learning models to predict wildfire and smoke dispersion.</li>
+					<li>Analyzed large-scale NASA remote sensing data related to wildfires in western U.S.</li>
+					<li>First author of a manuscript in preparation for peer-reviewed submission.</li>
+					<li>Presented research at the Data Science Conference and the Nevada NASA Statewide Meeting.</li>
+				</ul>
+				<p><b>Researcher & Software Developer</b> – Science & Mathematics of AI Modeling for Research and Technology (<a href="https://www.dri.edu/labs/smart-laboratory/" target="_blank">SMART</a>) Laboratory, Desert Research Institute, Reno, NV, May 2023 – August 2025<br>
+					Supervisor: Dr. Hans Moosmüller | Mentor: Dr. Lei Yang & Dr. Kailong Li 
+				</p>
+				<ul>
+					<li>Contributed to code development and experimental validation for lab publications.</li>
+					<li>Contributed to developing detailed explainable AI (XAI) and ML tasks for proposals submitted to NOAA & CAL FIRE.</li>
+					<li>Developed ML models for wildfire prediction as part of NASA EBSCoR Projects.</li>
+					<li>Co-authored two peer-reviewed papers (one published and one under review.)</li>
+					<li>Presented research as first author at the AMS national conference.</li>
+				</ul>
+				<p><b>Research Assistant</b> – Organic Analytical Lab, Desert Research Institute, NV, May 2022 – May 2023<br>
+					Supervisor: Dr. Andrey Khlystov | Mentor: Dr. Kevin Axelrod
+				</p>
+				<ul>
+					<li>Developed code for data analysis and visualization for an NIH-funded research project.</li>
+					<li>Processed large-scale datasets and contributed to analytical discussions.</li>
+					<li>Prepared technical reports summarizing research findings.</li>
+				</ul>
+				<p><b>Research Intern</b> – Robotics Laboratory, University of Nevada, Reno, NV, October 2018 – May 2019<br>
+					Advisor: Dr. Monica Nicolescu
+				</p>
+				<ul>
+					<li>Assisted with C++ modules for robotic simulations.</li>
+				</ul>
+			</section>
+			<!-- Add more experiences by duplicating <p><b>...</b></p> + <ul>...</ul> -->
+			<!-- ===== NEWS ===== 
+				<section id="news">
+					<h2>News</h2>
+					<ul>
+						<li><b>[Nov 5, 2025]</b> Updated Contact Section</li>
+						<li><b>[Nov 5, 2025]</b> Website launched</li>
+					</ul>
+				</section> -->
+			<!-- Note to self: Add future updates by duplicating the <li> line above -->
+			<!-- ===== PUBLICATIONS ===== -->
+			<section id="publications">
+				<h2>Peer-Reviewed Publications</h2>
+				<ul>
+					<li>
+						Barjeste Vaezi, R., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2025).
+						<i>Impacts of Wildfire Smoke Aerosols on Radiation, Clouds, Precipitation, Climate, and Air Quality.</i> 
+						<em>Atmospheric Environment X</em>, Elsevier, 26, 100322. 
+						<a href="https://doi.org/10.1016/j.aeaoa.2025.100322" target="_blank">DOI</a> <b>(Published)</b>
+					</li>
+					<li>
+						Li, K., <b>Martin, M. R.</b>, Wang, X. (2025).
+						<i>Stepwise Clustered Ensemble (SCE): An R Package for Interpretable and Robust Regression in Environmental Modeling.</i> 
+						Manuscript Number: ENVSOFT-D-25-02742
+						<em>Journal of	Environmental Modelling and Software</em> (Under Review · Manuscript #ENVSOFT-D-25-02742)
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Yang, L., Moosmüller, H. (2025).
+						<i>Deep Learning Framework for Predicting Wildfire Smoke Dispersion from Satellite Remote Sensing Data.</i> 
+						<em>In preparation</em> (In Preparation).
+					</li>
+				</ul>
+				<h2>Research Proposals</h2>
+				<ul>
+					<li>
+						<b>Martin, M. R.</b> (2025). 
+						<i>Visualizing the Impact of Data Perturbation on Text-to-Image Models using Explanative AI (XAI).</i> Authored a research proposal and presented at Explainable AI Using Visualization, University of California, Davis. (<a href="https://www.researchgate.net/publication/397702472_Visualizing_the_Impact_of_Data_Perturbation_on_Text-to-Image_Models_using_Explanative_AI_XAI" target="_blank">ResearchGate</a>)
+					</li>
+					<li>
+						<b>Martin, M. R.</b> (2025). 
+						<i>Enhancing Wildland Fire Predictability and Resilience Under Extreme Weather: An Innovative Physics-Guided AI/ML Model. </i> 
+						Contributed to proposal narrative and AI/ML methodology. Submitted to CAL FIRE. 
+					</li>
+					<li>
+						<b>Martin, M. R.</b> (2024).
+						<i>Advancing Predictive Modeling in Earth Science through Artificial Intelligence.</i> 
+						Authored proposal funded by NASA Space Grant Undergraduate Research Fellowship.
+						<a href="https://doi.org/10.13140/RG.2.2.18624.34567" target="_blank">ResearchGate</a>
+					</li>
+				</ul>
+				<h2>Technical Reports</h2>
+				<ul>
+					<li>
+						<b>Martin, M. R.</b> (2025).
+						<i>Advancing Predictive Modeling in Earth Science through Artificial Intelligence. </i> 
+						Final Technical Report to NASA Space Grant Program.
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Cao, R., Mamaril, J., Marsala, M. (2024).
+						<i>Development of an Innovative Mentorship Platform: Plato.</i> 
+						Undergraduate Capstone Project, University of Nevada, Reno, 171 pp. 
+						<a href="https://doi.org/10.13140/RG.2.2.23657.51043" target="_blank">ResearchGate</a> (<a href="https://github.com/Mamaril-Jeremy/CS425-Project" target="_blank">Code</a>)
+					</li>
+				</ul>
+				<h2>Conference Publications</h2>
+				<ul>
+					<li>
+						<b>Martin, M. R.</b> & Chan, G. (2025). 
+						<i>Explanative AI for Analyzing the Impacts of Data Purification on Image Models</i>
+						, Explainable AI using Visualization, University of California, Davis (Talk). 
+						<a href="https://www.researchgate.net/publication/397702695_Explainable_AI_for_Analyzing_the_Impact_of_Data_Perturbation_on_Image_AI_Models" target="_blank">ResearchGate</a>
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Yang, L., Moosmüller, H. (2025).
+						<i>Advancing Earth Science Predictive Modeling through Machine Learning and Deep Learning: A Multidisciplinary Approach</i> 
+						2025 Nevada NASA Space Grant Statewide Meeting  
+						<a href="https://nasa.epscorspo.nevada.edu/wp-content/uploads/2025/04/Martin_poster.pdf" target="_blank">NASA</a>
+						<a href="https://doi.org/10.13140/RG.2.2.28797.06881" target="_blank">ResearchGate</a> (Poster Presentation)
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Yang, L., Hosseinpour, F. (2025).
+						<i>Leveraging Machine Learning and NASA Satellite Data to Improve Wildfire Smoke Prediction and Environmental Insights.</i> 
+						<em>Data Science Conference</em>, Reno, NV, February 18–20, 2025. 
+						<a href="https://doi.org/10.13140/RG.2.2.32402.36808" target="_blank">ResearchGate</a> (Poster Presentation)
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Yang, L., Hosseinpour, F. (2025).
+						<i>Harnessing Machine Learning and NASA Satellite Big Data for Enhanced Wildfire Smoke Prediction and Air Quality Forecasting.</i> 
+						<em>Data Science Conference</em>, Reno, NV, February 18–20, 2025. 
+						<a href="https://doi.org/10.13140/RG.2.2.28208.06406" target="_blank">ResearchGate</a> Invited Undergraduate Speaker, Research Lightning Talk (Panel of Speakers)
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Mehdizadeh, G., Barjeste Vaezi, R., Erfani, E., Hosseinpour, F. E. (2024).
+						<i>Predictive Modeling in Environmental Science with Machine Learning Algorithms.</i> 
+						American Meteorological Society (AMS) 104th Annual Meeting, Baltimore, MD, January 29, 2024. <a href="https://www.researchgate.net/publication/377927435_Predictive_Modeling_in_Environmental_Science_with_Machine_Learning_Algorithms" target="_blank">ResearchGate</a>
+						(Poster Presentation)
+					</li>
+					<li>
+						Barjeste Vaezi, R., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2024).
+						<i>Machine Learning for Exploring Wildfire Smoke Emissions: A Data-Driven Approach.</i> 
+						2024 Nevada NASA Statewide Meeting, April 2024. 
+						<a href="https://www.researchgate.net/publication/379953800_Machine_Learning_for_Exploring_Wildfire_Smoke_Emissions_A_Data-Driven_Approach" target="_blank">ResearchGate</a> (Talk)
+					</li>
+					<li>
+						Barjeste Vaezi, R., Mehdizadeh, G., <b>Martin, M. R.</b>, Hosseinpour, F. E. (2024).
+						<i>Machine Learning Approach for Enhanced Understanding of California’s Wildfire Smoke.</i> 
+						American Meteorological Society (AMS) 104th Annual Meeting, Baltimore, MD, January 28–February 1, 2024. 
+						<a href="https://www.researchgate.net/publication/377927805_Machine_Learning_Approach_for_Enhanced_Understanding_of_California's_Wildfire_Smoke" target="_blank">ResearchGate</a> 
+						(Poster Presentation)
+					</li>
+					<li>
+						Mehdizadeh, G., Hosseinpour, F. E., <b>Martin, M. R.</b>, Barjeste Vaezi, R., Erfani, E., McDonough, F. (2024).
+						<i>Cloud Seeding Effects on Snowfall: Insights from Microphysical Model and Satellite Remote Sensing.</i> 
+						<em>American Meteorological Society (AMS) 104th Annual Meeting</em>, Baltimore, MD, January 28–February 1, 2024. <a href="https://www.researchgate.net/publication/377926676_Cloud_Seeding_Effects_on_Snowfall_Insights_from_Microphysical_Model_and_Satellite_Remote_Sensing" target="_blank">ResearchGate</a> 
+						(Poster Presentation)
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Cao, R., Mamaril, J., Marsala, M. (2024).
+						<i>Development of an Innovative Mentorship Platform: Plato.</i> 
+						<em>Innovation Day Competition</em>, University of Nevada, Reno, NV, May 2024. 
+						<a href="http://dx.doi.org/10.13140/RG.2.2.27012.95361" target="_blank">ResearchGate</a> (Oral Presentation) Public Choice Award Winner
+					</li>
+					<li>
+						<b>Martin, M. R.</b>, Cao, R., Jones, J., Mamaril, J., Marsala, M. (2024).
+						<i>Innovative Mentorship Platform: Plato.</i> 
+						<em>Sontag Entrepreneurship Competition</em>, University of Nevada, Reno, NV, January 2024. 
+						<a href="http://dx.doi.org/10.13140/RG.2.2.33723.84006" target="_blank">ResearchGate</a> (Pitch Presentation) Round 2 Winner
+					</li>
+				</ul>
+				<!-- To add a new publication:
+					Copy and paste a <li>...</li> block above, and edit the authors, title, and links. -->
+			</section>
+			<!-- ===== LEADERSHIP ==== -->
+			<section id="leadership">
+				<h2>Projects & Leadership</h2>
+				<ul>
+					<b>Real-Time VR Volume Rendering System — UC Davis</b> (2025 – present)<br>
+					Developing a VR volume-rendering pipeline integrating OpenXR with the OVR renderer and exploring Gaussian-splatting acceleration. Collaborator: Dr. David Bauer (Meta) • Advisor: Dr. Kwan-Liu Ma.
+					<p></p>
+					<b>ProneVR Project — UC Davis </b>(2025 – present)<br>
+					Developed an immersive therapeutic VR platform integrating real-time rendering, shader-based visual effects, spatial acoustics, and AI-driven interactive simulation. Advisor: Dr. Kwan-Liu Ma.
+					<p></p>
+					<b>Explainable AI for Text-to-Image Diffusion Models — UC Davis </b>(2025 – present)<br>
+					Investigating the impact of data perturbation on diffusion models using explainable-AI techniques to interpret model behavior, protection robustness, and feature-level responses to artist-focused poisoning methods. Collaborator: Garrick Chan • Advisor: Dr. Kwan-Liu Ma.
+					<p></p>
+					<b>SensePhase — Independent R&D</b> (2025 – present)<br>
+					Independent R&D in AI, AR/VR, interactive media, computer graphics, and explainable AI systems. 
+					<p></p>
+					<b>Fire Season Simulation Project — ACM Hackathon </b>(2025)<br>
+					Developed a real-time wildfire simulation with grid-based procedural terrain, raycasting-based interaction, adaptive AI balancing, and interactive UI systems (Godot).
+					<p></p>
+					<b>VR Software for Medical/Ocular Diagnosis </b>(2024)<br>
+					Developed a VR-based visual field assessment prototype in Unity (C#), integrating interface design and desktop simulation workflows to explore software-based ophthalmic diagnostics. (Patent in progress)
+					<p></p>
+					<b>Plato Mentorship Platform – Capstone Project </b>(2023 – 2024) <br>
+					Designed and implemented a scalable web-based mentorship platform using Svelte/SvelteKit, Firebase, and API integrations; developed matching logic and user interface systems (<a href="https://github.com/Mamaril-Jeremy/CS425-Project" target="_blank">GitHub</a>)
+					<p></p>
+					<b>Interactive Media & Simulation Prototypes – Independent </b>(2016 – 2024) 
+					<li>
+						Built real-time interactive simulation systems with 2D/3D animation, rendering, procedural visuals, physics, AI behaviors, audio-visual integration, 3D acoustic feedback, lighting, raycasting, database systems, and performance-optimized pipelines using engines such as Unity and Godot.
+					</li>
+					<li>
+						Created simulation prototypes, including a naval navigation system with AI pathfinding (<a href="https://github.com/MichaelMartinTech/NavySimulation_2023.git" target="_blank">GitHub</a>), a Solar system model (<a href="https://github.com/MichaelMartinTech/Solar_System_Simulation.git" target="_blank">GitHub</a>),  a Breakthrough chess variant with AI opponent (<a href="https://github.com/MichaelMartinTech/GameDev_IMadeABreakthrough.git" target="_blank">GitHub</a>), and an 8-Puzzle solver visualizing search algorithms (<a href="https://github.com/MichaelMartinTech/GameDev_8PuzzleSolver.git" target="_blank">GitHub</a>).
+					</li>
+					<p></p>
+					<b>Electronic Music, Spatial Audio & Sound Design – Independent</b> (2016 – present)<br>
+					Self-directed exploration of digital sound design, spatial audio, and aucoustics simulation acoustics simulation, with applications to interactive and immersive media, including VR environments
+				</ul>
+			</section>
+			<!-- ===== Grants and Fellowships ===== -->
+			<section id="grants">
+				<h2>Grants & Fellowships</h2>
+				<ul>
+					<li><b>Excellence Graduate Fellowship</b>, Graduate Group in Computer Science (GGCS), University of California, Davis (2025 – 2026).</li>
+					<li><b>NASA Space Grant Undergraduate Fellowship</b>, Nevada NASA Programs (2024 – 2025)
+						Awarded for an independent research proposal in AI/ML for environmental modeling..
+					</li>
+					<li><b>Merit-Based Computer Science Fellowship</b>, University of Washington (2019 – 2020).</li>
+					<li><b>Millennium Scholarship</b> (Merit-Based), Nevada State Treasurer's office (2020 – 2024).</li>
+				</ul>
+			</section>
+			<!-- ===== AWARDS ===== -->
+			<section id="awards">
+				<h2>Honors & Awards</h2>
+				<ul>
+					<li><b>ACM Hackathon Winner</b> – Public Choice Award, University of Nevada, Reno, May 2025.<br>
+						Recognized for developing Fire Season, an interactive media project completed in under 30 hours at a
+						highly competitive Northern Nevada hackathon with over 100 participants.
+					</li>
+					<li><b>Public Choice Award</b>, Innovation Day Competition, University of Nevada-Reno, NV, May 2024<br>
+						Selected among 300+ engineering students from seven disciplines for an innovative capstone project.
+					</li>
+					<li><b>Round 2 Winner</b>, Sontag Entrepreneurship Competition, University of Nevada, Reno, January 2024<br>
+						Developed and delivered a pitch presentation for Plato, an innovative mentorship platform, selected for
+						advancement in the university’s entrepreneurship showcase.
+					</li>
+					<li><b>Best Camera Use</b>, Programming with Animation Competition, University of Washington, March 2020.</li>
+					<li><b>U.S. President’s Award for Outstanding Academic Excellence</b>, signed by President Obama, 2016.</li>
+					<li><b>Top Nevada Finalist (National Competition)</b>, MathCON Mathematics Contest, University of Chicago, 2016.</li>
+					<li><b>National Honor Society Academic Excellence Award</b>, 2018 & 2019.</li>
+				</ul>
+			</section>
+			<!-- ===== TEACHING ===== -->
+			<section id="teaching">
+				<h2>Teaching Experience</h2>
+				<ul>
+					<li><b>Tutor</b> – University Tutoring Center, University of Nevada, Reno, 2020 – 2022<br>
+					</li>
+					<li><b>Tutor</b> – Robert McQueen High School, Reno, 2017 – 2019<br>
+						<b>Subjects:</b> AP Physics, AP Calculus, Trigonometry, Geometry, Algebra
+					</li>
+				</ul>
+			</section>
+			<!-- ==== Technical Skills ==== -->
+			<section id="technical-skills">
+				<h2>Technical Skills</h2>
+				<table>
+					<tr>
+						<th>Programming Languages</th>
+						<td>C#, C++, Python, Java, JavaScript, Lua, GDScript, ActionScript, SQL, Scheme, Arduino C++, Assembly</td>
+					</tr>
+					<tr>
+						<th>Computer Graphics & Visualization</th>
+						<td>OpenGL, GLFW, SOIL2, Assimp, Ogre3D; Unity (animation, UI), Blender (3D modeling, sculpting, texturing); Shaders, Scene Graphs, Matrix Stacks, Texture Handling, Lighting Calculation, Callback Functions Handling, OpenGL Context Creation.</td>
+					</tr>
+					<tr>
+						<th>Virtual Reality & Interactive Systems</th>
+						<td>Unity (C#, C++), Godot, Roblox Studio (Lua), Love2D (Lua); systems-level implementation of raycasting, physics-based simulation, real-time feedback environments, AI behavior trees, acoustic modeling</td>
+					</tr>
+					<tr>
+						<th>AI / Machine Learning</th>
+						<td>PyTorch, TensorFlow, scikit-learn; Deep Learning (CNN, LSTM), Ensemble Methods (Random Forest, Decision Trees), Algorithmic AI (A*, MinMax), Explainable AI (XAI)</td>
+					</tr>
+					<tr>
+						<th>Data & Scientific Computing</th>
+						<td>Pandas, NumPy, NoSQL, JSON; predictive modeling, big data analytics, pattern recognition, time-series analysis</td>
+					</tr>
+					<tr>
+						<th>Music, Acoustics Simulation, and Sound Design</th>
+						<td>Unity (C#), Lua, Ableton Live, Audacity, Logic Pro, FL Studio; 3D spatial audio scripting, real-time sound rendering, environmental acoustics, and acoustic raycasting; procedural audio generation, UI-triggered audio events, and spatial sound design.</td>
+					</tr>
+					<tr>
+						<th>Web & Full-Stack Development</th>
+						<td>HTML, CSS, JavaScript, Svelte, SvelteKit, Firebase, Cloudflare; responsive interfaces, authentication, and cloud storage integration</td>
+					</tr>
+					<tr>
+						<th>IDE / Development Tools</th>
+						<td>GitHub, Visual Studio, VS Code, Jupyter Notebook, Google Colab, Spyder</td>
+					</tr>
+					<tr>
+						<th>Operating Systems</th>
+						<td>Linux/Unix, macOS, Windows</td>
+					</tr>
+					<tr>
+						<th>Cloud / API Integration</th>
+						<td>Google Cloud Vision API, SightEngine</td>
+					</tr>
+				</table>
+			</section>
+			<!-- ===== AFFILIATIONS ===== -->
+			<section id="affiliations">
+				<h2>Professional Affiliations</h2>
+				<ul>
+					<li><b>Member</b>, Association for the Advancement of Artificial Intelligence (AAAI), 2024 – present.</li>
+					<li><b>Member</b>, Association for Computing Machinery (ACM), 2018 – present.</li>
+					<li><b>Member</b>, Google Developer Groups (GDG), University of Nevada, Reno, NV, 2024 – present<br>
+						Participated in meetings and technical discussions; expanded professional network with local developers.
+					</li>
+					<li><b>Member</b>, American Meteorological Society (AMS), 2023 – present.</li>
+					<li><b>Member</b>, USA Swimming, 2015 – present.</li>
+				</ul>
+			</section>
+			<!-- ===== PROFESSIONAL DEVELOPMENT ===== -->
+			<section id="prodev">
+				<h2>Professional Development</h2>
+				<ul>
+					<li><b>Teaching Assistant Training</b>, University of California, Davis, September 2025.</li>
+					<li><b>Machine Learning Certificate</b>, Machine Learning in Python for Environmental Science Problems short course, <b>American Meteorological Society (AMS) 104th Annual Meeting</b>, Baltimore, MD, January 2024.</li>
+					<li><b>American Geophysical Union (AGU) Annual Meeting</b>, San Francisco, CA — Attended 2017, 2018, 2019.</li>
+				</ul>
+			</section>
+			<!-- ===== COURSEWORK ===== -->
+			<!--
+				<section id="coursework">
+					<h2>Graduate Level Coursework</h2>
+					<p>Explainable AI with Visualization, Computer & Information Security, Computer Graphics, Virtual Reality, Pattern Recognition, Human-Computer Interactions (HCI), Advanced Game Design, Game Engine Architecture, Big Data, Research</p>
+					<h2>Upper Division Undergraduate Coursework</h2>
+					<p>Analysis of Algorithms, Automata & Formal Languages, Data Structures, Database Management Systems, Operating Systems, Software Engineering, Computer Communication Networks, Computer Organization, Concepts and Implementation, Digital Design, Embedded Systems Design, Mathematics of Computer Science, Senior Projects in Computer Science.</p>
+				</section>
+				-->
+			<!-- ===== CONTACT ===== -->
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>GitHub: <a href="https://github.com/MichaelMartinTech" target="_blank">MichaelMartinTech</a></p>
+				<p>ResearchGate: <a href="https://www.researchgate.net/profile/M-Martin-10" target="_blank">M-Martin-10</a></p>
+				<p>Orchid: <a href="https://orcid.org/0009-0001-1528-9965" target="_blank">0009-0001-1528-9965</a></p>
+				<p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=d2N1H0QAAAAJ&view_op=list_works&authuser=2&gmla=AGd7smG_vssD5Pq0snPrT2XIoVueqAfh_Ts_vlHZI_9Kr6xDjPOdfDqAjKJKxbZPe0iGzePIzL5fOa_lMSfAm_3n" target="_blank">View Profile</a></p>
+				<p>LinkedIn: <a href="https://www.linkedin.com/in/martin-portfolio" target="_blank">martin-portfolio</a></p>
+				<p>
+					Email: csemartin[at]ucdavis[dot]edu
+				</p>
+			</section>
+		</main>
+		<footer>
+			<p>All Rights Reserved © Michael R. Martin, 2025 - Present</p>
+		</footer>
+		<script>
+			const toggle = document.getElementById('theme-toggle');
+			const root = document.documentElement;
+			
+			function setTheme(theme) {
+				root.setAttribute('data-theme', theme);
+				localStorage.setItem('theme', theme);
+				toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+			}
+			
+			// Default to light unless a saved preference exists
+			const savedTheme = localStorage.getItem('theme') || 'light';
+			setTheme(savedTheme);
+			
+			toggle.addEventListener('click', () => {
+				const current = root.getAttribute('data-theme');
+				setTheme(current === 'dark' ? 'light' : 'dark');
+			});
+		</script>
+		<script>
+			const header = document.querySelector('header');
+			const topToggle = document.getElementById('top-toggle');
+			
+			// manual toggle
+			topToggle.addEventListener('click', () => {
+				const isCollapsed = document.body.classList.toggle('top-collapsed');
+				// if collapsed → show ˅ (expand available)
+				topToggle.textContent = isCollapsed ? '˅' : '˄';
+			});
+			
+			// scroll logic
+			window.addEventListener('scroll', () => {
+				const pastHeader = window.scrollY > header.offsetHeight;
+			
+				if (pastHeader) {
+					// show floating mode
+					document.body.classList.add('scrolled');
+					// when entering floating mode, default collapsed
+					if (!document.body.dataset.enteredFloating) {
+						document.body.classList.add('top-collapsed');
+						topToggle.textContent = '˅'; // collapsed by default (show ˅ to expand)
+						document.body.dataset.enteredFloating = 'true';
+					}
+				} else {
+					// reset when back at top
+					document.body.classList.remove('scrolled');
+					document.body.classList.remove('top-collapsed');
+					topToggle.textContent = '˄'; // expanded at top (˄ to collapse)
+					delete document.body.dataset.enteredFloating;
+				}
+			});
+			
+			// start expanded at top
+			document.body.classList.remove('top-collapsed');
+			topToggle.textContent = '˄';
+		</script>
+		<script>
+			// Smooth scroll to top when clicking "Home"
+			document.querySelector('a[href="#home"]').addEventListener('click', (event) => {
+				event.preventDefault(); // stop default jump behavior
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+		</script>
+	</body>
 </html>
