@@ -72,17 +72,14 @@ nav a:hover {
 	position: absolute;
 	top: 1.5em;
 	right: 1.5em;
-
 	display: flex;
 	gap: 0.8em;
 	align-items: center;
 }
 
-	
 #theme-toggle,
 .cv-button {
 	position: static;
-
 	/* these styles were lost when you removed the old blocks */
 	background: var(--accent);
 	color: #fff;
@@ -106,6 +103,7 @@ nav a:hover {
 	background: #888;
 	color: #fff;
 }
+
 .cv-button:hover {
 	background: #666;
 }
@@ -114,12 +112,12 @@ nav a:hover {
 main {
 	max-width: 900px;
 	background: var(--card-bg);
-	margin: 3em auto 0 auto; /* sets top margin to 3em normally */
+	margin: 3em auto 0 auto;
+	/* sets top margin to 3em normally */
 	padding: 3em 3em 2em;
 	border-radius: 16px;
 	box-shadow: 0 6px 25px var(--shadow);
 	transition: background 0.3s ease, box-shadow 0.3s ease;
-
 	padding-top: 2em;
 }
 
@@ -192,13 +190,22 @@ footer {
 html {
 	scroll-behavior: smooth;
 }
-html, body {
+
+html,
+body {
 	background-color: var(--card-bg);
 }
 
 @keyframes fadeIn {
-	from { opacity: 0; transform: translateY(10px); }
-	to { opacity: 1; transform: translateY(0); }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* ==== Responsive ==== */
@@ -206,11 +213,13 @@ html, body {
 	main {
 		padding: 2em 1.5em;
 	}
+
 	nav {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+
 	nav a {
 		margin: 0.4em;
 	}
@@ -218,7 +227,6 @@ html, body {
 
 /* default state: hidden sidebar */
 /* ===== Floating topbar Navigation (updated from side) ===== */
-
 /* hidden by default */
 /* ===== Floating Top Bookmark Bar ===== */
 body.scrolled #top-nav {
@@ -247,7 +255,8 @@ body.scrolled .top-nav-links {
 
 /* prevent the bar from covering content when visible at top */
 body.scrolled main {
-	padding-top: 3.4em; /* adjust if you change bar height */
+	padding-top: 3.4em;
+	/* adjust if you change bar height */
 	transition: padding-top 0.2s ease;
 }
 
@@ -264,12 +273,18 @@ body.scrolled main {
 	padding: 0.3em 0.4em;
 	border-radius: 6px;
 	z-index: 1000;
-	display: none; /* show only after header has scrolled away */
+	display: none;
+	/* show only after header has scrolled away */
 }
-#top-toggle:hover { color: var(--accent-dark); }
+
+#top-toggle:hover {
+	color: var(--accent-dark);
+}
 
 /* show the toggle only when header is out of view */
-body.scrolled #top-toggle { display: block; }
+body.scrolled #top-toggle {
+	display: block;
+}
 
 /* collapsed state: slide the whole nav off-screen so it doesn't block content */
 body.top-collapsed #top-nav {
@@ -279,12 +294,19 @@ body.top-collapsed #top-nav {
 }
 
 /* when collapsed, remove the extra top padding */
-body.scrolled.top-collapsed main { padding-top: 0; }
+body.scrolled.top-collapsed main {
+	padding-top: 0;
+}
 
 /* small screens */
 @media (max-width: 600px) {
-	body.scrolled #top-nav { padding: 0.6em; }
-	#top-toggle { top: 0.2em; }
+	body.scrolled #top-nav {
+		padding: 0.6em;
+	}
+
+	#top-toggle {
+		top: 0.2em;
+	}
 }
 
 /* ====== Top Header Contact Links ====== */
@@ -308,7 +330,6 @@ header .contact-row {
 	filter: grayscale(100%);
 	transition: filter 0.3s ease;
 }
-
 
 header .contact-item img {
 	width: 18px;
@@ -335,6 +356,7 @@ header .contact-item:hover img {
 	header .contact-row {
 		gap: 0.8em;
 	}
+
 	header .contact-item {
 		font-size: 0.9em;
 	}
