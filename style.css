@@ -361,3 +361,29 @@ header .contact-item:hover img {
 		font-size: 0.9em;
 	}
 }
+
+/* === Current Research layout === */
+.research-item {
+	display: grid;
+	grid-template-columns: 140px 1fr; /* SMALL left column */
+	gap: 20px;
+	align-items: start;
+	margin-bottom: 24px;
+}
+
+.research-image img {
+	width: 100%;
+	max-width: 140px; /* HARD CAP on image size */
+	height: auto;
+	border: 1px solid #ccc;
+}
+
+/* Stack cleanly on mobile */
+@media (max-width: 768px) {
+	.research-item {
+		grid-template-columns: 1fr;
+	}
+	.research-image img {
+		max-width: 100%;
+	}
+}
