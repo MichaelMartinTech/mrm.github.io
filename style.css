@@ -6,6 +6,7 @@
 	--accent-dark: #004f99;
 	--shadow: rgba(0, 0, 0, 0.08);
 	--border: #eee;
+   --scroll-offset: 5em;
 }
 
 [data-theme="dark"] {
@@ -135,6 +136,7 @@ section {
 	box-shadow: 0 1px 4px var(--shadow);
 	animation: fadeIn 0.4s ease;
 	transition: background 0.3s ease, box-shadow 0.3s ease;
+   scroll-margin-top: var(--scroll-offset);
 }
 
 body.scrolled section {
