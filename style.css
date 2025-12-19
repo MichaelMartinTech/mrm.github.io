@@ -137,6 +137,10 @@ section {
 	transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+body.scrolled section {
+	scroll-margin-top: 3.5em;
+}
+
 section h2 {
 	font-size: 1.4em;
 	border-left: 4px solid var(--accent);
